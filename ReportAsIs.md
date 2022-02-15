@@ -171,7 +171,8 @@ List and describe key processes
 | --------------------------------- | -------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------- |
 | **Inventory / restock**           | Check the missing ingredients, buy them and restock theinventory                 | ingredients request             | inventory restocked                   |
 | **Get new order**                 | Customer requests products, all the informations are written in the order ticket | order request                   | order ticket                          |
-| **Prepare products for an order** | Queue organization, Cook products and pack up them in pizza boxes                | order ticket                    | pizza ready to be delivered/picked up |
+| **Queue organization**            | Organize ticket orders in a sorted queue by delivery time                        | ticket order                    | ticket orders in an ordered queue     |
+| **Prepare products for an order** | Cook products and pack up them in pizza boxes                                    | scheduled order                 | pizza ready to be delivered/picked up |
 | Deliver order                     | Get the products ready to be delivered and ship them to the customer             | Products ready and order ticket | Product at customers house            |
 
 (must be consistent with key processes box in BMC)
@@ -186,9 +187,12 @@ For processes that will be changed in the transition to To Be report BPMN model
 ![restock bpmn](./images/BPMN_ASIS_InventoryRestock.png)
 #### Get new order
 ![get new order bpmn](./images/BPMN_ASIS_GetNewOrder.png)
-#### Prepare products for an order
 
-TODO:
+#### Queue management
+![queue management bpmn](./images/BPMN_ASIS_QueueManagement.png)
+#### Prepare products for an order
+![prepare products for an order bpmn](./images/BPMN_ASIS_PrepareProductsForAnOrder.png)
+
 ## IT  view
 
 TODO:
@@ -251,11 +255,11 @@ CSF ( derived by us)
 
 TODO:
 
-| CSF ID | Type (domain, distinguishing, environment, contingency) | Textual description, link to strategy     | Related Metric(s)                                                                                     | Current value (if available) |
-| ------ | ------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------- |
-| CSF1   | Buisness domain                                         | fast delivery time of the customer orders | - Response time to phone calls <br>- number of pizzas produced per week <br>- mean time to transport an order |        - 2 min <br>-  **X** pizza/week<br>- 8  min                  | 
-| CSF2   | Buisness domain                                         | quality of the product                    | - complaints per week <br>-mean rating of JustEat reviews of last week<br> |   - **X** complaints/week <br>- **X** stars |
-| CSF3   | Buisness domain                                         | Marketing efficiency                      | - new clients per week <br>  -sales per week<br>-number of distributed flyers per week                           |    - **X** clients<br>-**X** pizzas sold per week<br>- **X** flyers per week   |
+| CSF ID | Type (domain, distinguishing, environment, contingency) | Textual description, link to strategy     | Related Metric(s)                                                                                             | Current value (if available)                                              |
+| ------ | ------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| CSF1   | Buisness domain                                         | fast delivery time of the customer orders | - Response time to phone calls <br>- number of pizzas produced per week <br>- mean time to transport an order | - 2 min <br>-  **X** pizza/week<br>- 8  min                               |
+| CSF2   | Buisness domain                                         | quality of the product                    | - complaints per week <br>-mean rating of JustEat reviews of last week<br>                                    | - **X** complaints/week <br>- **X** stars                                 |
+| CSF3   | Buisness domain                                         | Marketing efficiency                      | - new clients per week <br>  -sales per week<br>-number of distributed flyers per week                        | - **X** clients<br>-**X** pizzas sold per week<br>- **X** flyers per week |
 
 ## KPI
 
