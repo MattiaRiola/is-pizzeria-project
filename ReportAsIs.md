@@ -185,8 +185,7 @@ For processes that will be changed in the transition to To Be report BPMN model
 #### Invetory restock
 ![restock bpmn](./images/BPMN_ASIS_InventoryRestock.png)
 #### Get new order
-
-TODO:
+![get new order bpmn](./images/BPMN_ASIS_GetNewOrder.png)
 #### Prepare products for an order
 
 TODO:
