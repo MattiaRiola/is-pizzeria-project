@@ -19,7 +19,7 @@ about 350.000€
 
 ## Size
 
-3 employees full time (pizza chef)
+3 employees full time (pizza chefs and owners of the company)
 3 employees full time (delivery man/cashier)
 6 employees part time 50% (delivery man)
 6 employees part time 10% ("jolly" delivery man)
@@ -92,7 +92,7 @@ There is no IT/IS office.
 The IT part of this organization is an external online food order service (just eat).
 
 
-The activities for inventory and stuff like that are managed by the pizza chef (on paper) 
+The activities for inventory, accounting and restock are managed by the pizza chef (producing only handwritten notes on paper) 
 
 
 estimation of expense in IT/IS:
@@ -108,7 +108,7 @@ Report ratio: expense in IT / Turn over
 
 ## Formalization / specialization/ centralization
 
-TODO:
+**Formalization:** low level of formalization, there aren't any specific standards or documents for this kind of activity (except for HACCP procedures)
 
 **Specialization:** most of the task can be performed by every employee but some specific tasks like cooking pizzas require specific skills so can be performed only by a sub-group of employees (the owners)
 
@@ -122,8 +122,34 @@ Argument if organization is: entrepreneurial start up / divisionalized bureaucra
 
 # Business Model Canvas
 
-TODO:
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-0pky" rowspan="2"><span style="font-weight:bold">Key partnerships</span><br>- Flour, vegetabe and meat suppliers.<br>- JustEat</td>
+    <td class="tg-0pky"><span style="font-weight:bold">Key activities</span><br>Manufactoring (producing pizzas) <br>Logistic (Delivering)</td>
+    <td class="tg-0pky" rowspan="2"><span style="font-weight:bold">Value Proposition</span><br>Low-cost italian pizza at home with a reliable and fast delivery service <br> (serving only orders within a certain range from the three restaurants) <br><br> 'Order and forget, relax'</td>
+    <td class="tg-0pky"><span style="font-weight:bold">Customer Relationship</span><br> self service (call restaurant if there is problem) </td>
+    <td class="tg-0pky" rowspan="2"><span style="font-weight:bold">Customers segments</span><br>People used to eat ordered pizza at home</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">Key Resources</span><br>- Restaurants<br>- Inventory of Ingredients for pizza production<br>- Inventory of drinks
+    <br>- Delivering Cars</td>
+    <td class="tg-0pky"><span style="font-weight:bold">Channels</span><br>Restaurants (face to face interaction customer-cashier), Phone lines advertised by paper flyers, food delivery application NOT managed by the company (JustEat)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky" colspan="2"><span style="font-weight:bold">Cost Structure</span><br>Restaurants, Employees, Ingredients, JustEat fees</td>
+    <td class="tg-0pky" colspan="3"><span style="font-weight:bold">Revenue Streams</span><br>Sales of pizzas and drinks</td>
+  </tr>
+</tbody>
+</table>
 Remark: key processes box must be consistent with IS Views /  Process view (below)
 
 # IS Views
@@ -212,15 +238,24 @@ TODO:
 
 CSF ( derived by us)
 
-general
-C1 minimize the delivery time of the customer orders
-C2 customer relationship 
+**General**<br>
+- CSF1 fast delivery time of the customer orders <br>
+  - CSF11 response time to phone calls
+  - CSF12 mean time to produce a pizza
+  - CSF13 mean time to transport an order
+  - deliver in less than 1h from call if orders are "ASAP"
+  - CSF12 deliver with a max delay of 15 min if delivery time was specified
 
-Function (manufacturing)
-CM1 Speed of order preparation (related to C1)
+- CSF2 quality of the product 
+  - CSF21 number of complaints from users
+  - CSF22 ratings of reviews on JustEat
+  - CSF23 skill level of the pizza chefs
 
-Function (marketing)
-CF1 Order info management (related to C1 and C2)
+- CSF3 Marketing efficiency
+  - CSF31 Number of new clients
+  - CSF32 trend of sales
+  - CSF33 delivered advertisement flyers
+
 
 TODO:
 
