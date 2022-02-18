@@ -2,7 +2,8 @@ Model of Organization – as is
 
 # Identification
 
-Pizzeria Giusti, Nichelino (TO)
+Pizzerie 2 fratelli, Torino 
+(3 pizzerias manged by 2 brothers)
 
 xxxxxxxxx (ex partita iva, codice fiscale, ..)
 
@@ -13,7 +14,8 @@ xxxxxxxxx (ex partita iva, codice fiscale, ..)
 Legal form (ex srl, snc, sas, plc, co, …)
 
 Turn over year 2018
-about 350.000€
+about 350.000€ per pizzeria
+about 1.050.000€ of all the pizzerias 
 
 # Organizational variables
 
@@ -98,12 +100,13 @@ The activities for inventory, accounting and restock are managed by the pizza ch
 estimation of expense in IT/IS:
 just eat fees = about 20% <br>
 just eat ratio = just eat orders/tot orders = about 25% <br>
-expense in IT (fees)= just eat fees * just eat ratio * turnover = 0,20 * 0,25 * 350000 = 17500 € per year <br>
+expense in IT (fees)= just eat fees * just eat ratio * turnover = 0,20 * 0,25 * 1.050.000 = 52500 € per year <br>
 
 num working days in a year = about 330 days <br>
 Person hours for IT/IS per working day = about 6 hours (considering order management and inventory) <br>
 Salary [€/hours] = 7€/hours <br>
 expense in IT (employees) = Salary * person hours per working day * num working days in a year = 7 * 6 * 330 = 13860€ per year <br>
+expense in IT (Total) = expense in IT (employees) + expense in IT (fees) = 52500€ + 13860€ = 66360€
 Report ratio: expense in IT / Turn over
 
 ## Formalization / specialization/ centralization
@@ -195,23 +198,24 @@ For processes that will be changed in the transition to To Be report BPMN model
 
 ## IT  view
 
-TODO:
 ### Application portfolio
-
-TODO:
 
 List IT applications or services used
 
-| Application name | Vendor (or internal if made internally) | Main functions |
-| ---------------- | --------------------------------------- | -------------- |
-|                  |                                         |                |
+| Application name     | Vendor (or internal if made internally) | Main functions         |
+| -------------------- | --------------------------------------- | ---------------------- |
+| Just eat application | just eat                                | manage just eat orders |
 
 
 
 ### Technological view
 
-TODO:
+```plantuml
+@startuml
+[Just eat server] -- [pizza chef's mobile app]
 
+@enduml
+```
 UML deployment diagram, showing computational nodes, and allocation of applications + data clusters to nodes
 
 (data clusters == group of classes, from the data model, UML class diagram)
