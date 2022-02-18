@@ -98,15 +98,18 @@ The activities for inventory, accounting and restock are managed by the pizza ch
 
 
 estimation of expense in IT/IS:
-just eat fees = about 20% <br>
-just eat ratio = just eat orders/tot orders = about 25% <br>
-expense in IT (fees)= just eat fees * just eat ratio * turnover = 0,20 * 0,25 * 1.050.000 = 52500 € per year <br>
-
-num working days in a year = about 330 days <br>
-Person hours for IT/IS per working day = about 6 hours (considering order management and inventory) <br>
-Salary [€/hours] = 7€/hours <br>
-expense in IT (employees) = Salary * person hours per working day * num working days in a year = 7 * 6 * 330 = 13860€ per year <br>
-expense in IT (Total) = expense in IT (employees) + expense in IT (fees) = 52500€ + 13860€ = 66360€
+just eat fees = about 14% <br>
+just eat ratio = just eat orders/tot orders = about 14% <br>
+expense in IT (fees)= just eat fees * just eat ratio * turnover = 0,14 * 0,25 * 1.050.000 = 36750 € per year <br>
+just eat paper = 7,5€/month * 3 = 270€ per year 
+ticket order post-it + pens = 10€/month * 3 = 360€ per year 
+expense IT (paper) = 360+270 = 630€<br>
+num working days in a year = about 330 days
+Average Person hours for IT/IS per working day = about 6 hours per pizzeria (considering order management and inventory) * 3 pizzerias = 18
+Salary [€/hours] = 7€/hours
+expense in IT (employees) = Salary * person hours per working day * num 
+working days in a year = 7 * 18 * 330 = 41580€ per year <br>
+expense in IT (Total) = expense in IT (employees) + expense in IT (fees) + expense IT (paper) = 52500€ + 41580€ + 630€ = 94710€
 Report ratio: expense in IT / Turn over
 
 ## Formalization / specialization/ centralization
@@ -159,8 +162,6 @@ Remark: key processes box must be consistent with IS Views /  Process view (belo
 
 ## Functional view, data
 
-
-TODO:
 ```plantuml
 @startuml
 class Pizzerie2Fratelli {
