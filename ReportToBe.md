@@ -1,4 +1,4 @@
-Model of Organization – To Be
+Model of Organization ï¿½ To Be
 
 
 
@@ -40,9 +40,38 @@ other wise detail only the box(es) that change
 
 ## Functional view, data
 
-Write no change if the model remains as in As Is
+Ticket order now have an additional field: customer number
 
-Otherwise report here new class diagram and highlight where are the changes and why
+Product has another link for substitue product chosen by the customer
+
+Quantity in Ingredient (empty low  medium full)
+
+```plantuml
+@startuml
+class TicketOrder {
+  + delivery address
+  + additional notes
+  + time
+  + order type: just eat or on site/phone call
+  + payment: payed or to pay
+  + status: queue/cooking/shipping/done
+  + customer number
+}
+
+class Product {
+  + type: food or drink
+}
+
+class Ingredient {
+  + ID
+  + quantity
+}
+
+Product "+" -- "*" TicketOrder : ordered in >
+Product "*" -- "*" TicketOrder : possible substitude >
+Ingredient "+" -- "*" Product 
+@enduml
+```
 
 ## Functional view, processes
 
@@ -115,7 +144,7 @@ Discuss if there should be changes to it.
 
 ## Effect on KPIs and CSFs
 
-(remark, KPIs and CSFs should not depend on the change, but should remain the ones defined in the As Is section – the goal being to compare the effect of the change on the same indicators)
+(remark, KPIs and CSFs should not depend on the change, but should remain the ones defined in the As Is section ï¿½ the goal being to compare the effect of the change on the same indicators)
 
 Report only indicators that are supposed to change, argument on why the change has an effect on them, report how much the indicator could change. Do not forget the unit cost of the product / service.
 

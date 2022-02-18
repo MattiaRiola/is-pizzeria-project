@@ -221,7 +221,6 @@ class Product {
 
 class Ingredient {
   + ID
-  + quantity
 }
 
 class Review {
@@ -234,14 +233,14 @@ Pizzeria "*" -- Pizzerie2Fratelli
 Person <|- PizzaChef
 Person <|- Cashier
 Person <|- DeliveryMan 
-DeliveryMan "+" -- Pizzeria : "work in >"
-Cashier "+" -- Pizzeria : "work in >"
+DeliveryMan "+" -- Pizzeria : work in >
+Cashier "+" -- Pizzeria : work in >
 DeliveryMan -- "+" Vehicle
-Pizzeria -- "+" PizzaChef : "work in >"
-Pizzeria "*" -- PizzaChef : "< manage"
-TicketOrder "*" -- Cashier : "< write"
+Pizzeria -- "+" PizzaChef : work in >
+Pizzeria "*" -- PizzaChef : < manage
+TicketOrder "*" -- Cashier : < write
 TicketOrder "*" -- Customer
-TicketOrder "*" -- "+" Product 
+TicketOrder "*" -- "+" Product : > has
 Ingredient "*" -- "*" Product
 Review "0..1" -- TicketOrder 
 
