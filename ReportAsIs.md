@@ -107,10 +107,10 @@ expense IT (paper) = 360+270 = 630€<br>
 num working days in a year = about 330 days
 Average Person hours for IT/IS per working day = about 6 hours per pizzeria (considering order management and inventory) * 3 pizzerias = 18
 Salary [€/hours] = 7€/hours
-expense in IT (employees) = Salary * person hours per working day * num 
-working days in a year = 7 * 18 * 330 = 41580€ per year <br>
+expense in IT (employees) = Salary * person hours per working day * num working days in a year = 7 * 18 * 330 = 41580€ per year <br>
 expense in IT (Total) = expense in IT (employees) + expense in IT (fees) + expense IT (paper) = 52500€ + 41580€ + 630€ = 94710€
-Report ratio: expense in IT / Turn over
+**expense in IT (Total) = 94710€**<br>
+**Report ratio: expense in IT / Turn over = 94710/1050000 = 0,0902**
 
 ## Formalization / specialization/ centralization
 
