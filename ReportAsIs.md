@@ -157,13 +157,96 @@ Remark: key processes box must be consistent with IS Views /  Process view (belo
 
 # IS Views
 
-TODO:
 ## Functional view, data
 
 
 TODO:
+```plantuml
+@startuml
+class Pizzerie2Fratelli {
+  + ID
+  + p. iva
+} 
 
-UML class diagram for data conceptual model (common to all processes / all organization)
+class Pizzeria {
+  + ID
+  + address
+  + menù
+  
+}
+
+class Person {
+  + Name
+  + Surname
+}
+
+class PizzaChef {
+  + skill level
+  + certificate
+  + Salary
+  + phone number
+}
+
+class Cashier {
+  + Salary
+  + phone number
+}
+
+class DeliveryMan {
+  + Salary
+  + phone number
+}
+
+class Customer {
+}
+
+class Vehicle {
+  + ID
+  + Type
+}
+
+class TicketOrder {
+  + delivery address
+  + additional notes
+  + time
+  + order type: just eat or on site/phone call
+  + payment: payed or to pay
+  + status: queue/cooking/shipping/done
+}
+
+class Product {
+  + type: food or drink
+}
+
+class Ingredient {
+  + ID
+  + quantity
+}
+
+class Review {
+  + ID
+  + Stars: from 1 to 5
+  + Description
+}
+
+Pizzeria "*" -- Pizzerie2Fratelli 
+Person <|- PizzaChef
+Person <|- Cashier
+Person <|- DeliveryMan 
+DeliveryMan "+" -- Pizzeria : "work in >"
+Cashier "+" -- Pizzeria : "work in >"
+DeliveryMan -- "+" Vehicle
+Pizzeria -- "+" PizzaChef : "work in >"
+Pizzeria "*" -- PizzaChef : "< manage"
+TicketOrder "*" -- Cashier : "< write"
+TicketOrder "*" -- Customer
+TicketOrder "*" -- "+" Product 
+Ingredient "*" -- "*" Product
+Review "0..1" -- TicketOrder 
+
+@enduml
+```
+
 
 ## Functional view, processes
 
