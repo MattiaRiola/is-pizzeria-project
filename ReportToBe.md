@@ -1,4 +1,4 @@
-Model of Organization � To Be
+Model of Organization: To Be
 
 
 
@@ -6,33 +6,54 @@ Model of Organization � To Be
 
 Here describe at high level the change(s), and their motivation. Link with critical points identified in As Is analysis
 
-The following sections are meant to describe in more detail the changes, using the same structure used in the As Is document.
+**To contrast order loss and mischeduling of orders**
+A web app will be developed to automatize and reduce human errors in the following events:
+- A section of the web applications will be used by the pizza chef to signal the status empty/low/medium/full of the ingredients, this will be useful for:
+  - Giving the cashier the ability to register only orders that can be satisfied reaching an agreement with the client at ordering time.
+  - Automatically create a shopping list for the restock. 
+- Orders will be registered by the cashier in the system with a dedicated form instead of writing the infos by hand on paper post-its.
+- Registered orders will be visible by the pizza chef in the kitchen and automatically scheduled by the system 
+- Orders information will be visible by the deliverers in a dedicated page of the webapp through their smartphones.
+- Register customer to get customer informations only once in order to:
+  - build loyalty of the customer by offering loyalty prizes.
+  - speed up ordering process
 
 # Organizational variables
 
-Keep this section and subsections, if there is no change just write &#39;no change&#39;.  In case there is a change detail it.
+Keep this section and subsections, if there is no change just write 'no change'.  In case there is a change detail it.
 
 ## Size
+'no change'
 
 ## Products services
-
+'no change'
 ## Goal, goal type, vision, mission, strategy
-
+'no change'
 ## Culture
-
+- "striving for customer satisfaction"
+- "efficiency good lmao"
 ## Structure
-
+'no change'
 ### IT office
-
+Outsourced management of the application and technical assistance by IT consultancy company
 ## Formalization specialization centralization
-
+'no change'
 ## Organizational type
-
+'no change'
 # Business model canvas
 
-if there is no change just write &#39;no change&#39;
+if there is no change just write 'no change'
 
 other wise detail only the box(es) that change
+
+**Key Partnership:**
+- Added to the key partners the consultancy company that produces and maintain the web app
+
+**Cost structure**
+- Added to the cost structue the maintenance of the web app
+
+**Key Resources**
+- Added to the Key Resources the web app
 
 
 
@@ -42,6 +63,7 @@ other wise detail only the box(es) that change
 
 Ticket order now have an additional field: customer number
 
+@TODO: review this, is it necessary?  
 Product has another link for substitue product chosen by the customer
 
 Quantity in Ingredient (empty low  medium full)
@@ -64,6 +86,7 @@ class Product {
 
 class Ingredient {
   + ID
+  + name
   + quantity
 }
 
@@ -81,6 +104,10 @@ Write no change if the model remains as in As Is
 
 Report the PICK chart (see process redesign chapter)  used to select the process to be changed and argument about it
 
+| Pick chart | Supporting Software functions |
+| --- | --- |
+|   |   |
+|   |   |
 ### Process y
 
 For each changed process report the new BPMN (highlight where are the changes and why) and  the software functions needed by the IS, as follows
