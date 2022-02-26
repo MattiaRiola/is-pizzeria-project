@@ -104,10 +104,7 @@ Write no change if the model remains as in As Is
 
 Report the PICK chart (see process redesign chapter)  used to select the process to be changed and argument about it
 
-| Pick chart | Supporting Software functions |
-| --- | --- |
-|   |   |
-|   |   |
+![PICK chart](./images/PICK_chart_TO_BE.jpg)
 ### Process y
 
 For each changed process report the new BPMN (highlight where are the changes and why) and  the software functions needed by the IS, as follows
