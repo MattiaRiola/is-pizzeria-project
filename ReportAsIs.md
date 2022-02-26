@@ -332,11 +332,11 @@ CSF ( derived by us)
 
 TODO:
 
-| CSF ID | Type (domain, distinguishing, environment, contingency) | Textual description, link to strategy     | Related Metric(s)                                                                                                               | Current value (if available)                                              |
-| ------ | ------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| CSF1   | Buisness domain                                         | fast delivery time of the customer orders | - Response time to phone calls and call duration <br>- number of pizzas produced per week <br>- mean time to transport an order | - 2 min <br>-  **X** pizza/week<br>- 8  min                               |
-| CSF2   | Buisness domain                                         | quality of the product and service                   | - complaints per week <br>-mean rating of JustEat reviews of last week<br>                                                      | - **X** complaints/week <br>- **X** stars                                 |
-| CSF3   | Buisness domain                                         | Marketing efficiency                      | - new clients per week <br>  -sales per week<br>-number of distributed flyers per week                                          | - **X** clients<br>-**X** pizzas sold per week<br>- **X** flyers per week |
+| CSF ID | Type (domain, distinguishing, environment, contingency) | Textual description, link to strategy     | Related Metric(s)                                                                                                          | Current value (if available)                                              |
+| ------ | ------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| CSF1   | Buisness domain                                         | fast delivery time of the customer orders | - Response time to phone calls and call duration <br>- mean time to prepare an order <br>- mean time to transport an order | - 2 min <br>-  **X** minutes <br>- 8  min                                 |
+| CSF2   | Buisness domain                                         | quality of the product and service        | - complaints per week <br>-mean rating of JustEat reviews of last week<br>                                                 | - **X** complaints/week <br>- **X** stars                                 |
+| CSF3   | Buisness domain                                         | Marketing efficiency                      | - new clients per week <br>  -sales per week<br>-number of distributed flyers per week                                     | - **X** clients<br>-**X** pizzas sold per week<br>- **X** flyers per week |
 
 ## KPI
 
@@ -349,17 +349,21 @@ TODO:
 | shopping frequency          | General                       | Number of times shopping for missing product is needed                          | Count           | -                    | -                            |
 | Ingredient Requests         | General                       | Number of time a product needs to be restocked                                  | Count           | -                    | -                            |
 | Ingredient Bought           | General                       | Number of time a requested product is bought                                    | Count           | -                    | -                            |
-| Restocked Ingredients Ratio | Quality                       | Ingredients bought/ingredient requested                                         | Number          | CSF2                 | -                            |
+| Restocked Ingredients Ratio | Quality                       | Ingredients bought/ingredient requested                                         | Number          | -                    | -                            |
 
 
 ### Process 2: "Get New Order"
 
-| KPI name             | KPI type (general, service..) | description                     | Unit of measure | CSF covered (if any) | Current value (if available) |
-| -------------------- | ----------------------------- | ------------------------------- | --------------- | -------------------- | ---------------------------- |
-| Order quantity       | General                       | Number of orders received       | Count           | CSF3                 | -                            |
-| Wrong Order quantity | General                       | Number of orders signed wrong   | Count           | CSF2                 | -                            |
-| Odered Products      | General                       | Number of products ordered      | Count           | CSF3                 | -                            |
-| Time to order        | Service                       | Time spent getting orders infos | Time            | CSF1                 | -                            |
+| KPI name                   | KPI type (general, service..) | description                                               | Unit of measure | CSF covered (if any) | Current value (if available) |
+| -------------------------- | ----------------------------- | --------------------------------------------------------- | --------------- | -------------------- | ---------------------------- |
+| Order quantity             | General                       | Number of orders received                                 | Count           | CSF3                 | -                            |
+| Wrong Order quantity       | General                       | Number of orders signed wrong                             | Count           | CSF2                 | -                            |
+| Odered Products            | General                       | Number of products ordered                                | Count           | CSF3                 | -                            |
+| Time to order              | Service                       | Time spent getting orders infos                           | Time            | CSF1                 | -                            |
+| UC received order          | Efficiency                    | (Cashiers salary + postit cost)/Number of received orders | Euro            | -                    | -                            |
+| Number of telephone orders | General                       | Number of orders received by telephone call               | Count           | -                    | -                            |
+| Number of JustEat orders   | General                       | Number of orders received via JustEat                     | Count           | -                    | -                            |
+
 
 ### Process 3: "Queue managment"
 
@@ -372,18 +376,32 @@ TODO:
 
 ### Process 4: "Prepare order"
 
-| KPI name                       | KPI type (general, service..) | description                                         | Unit of measure | CSF covered (if any) | Current value (if available) |
-| ------------------------------ | ----------------------------- | --------------------------------------------------- | --------------- | -------------------- | ---------------------------- |
-| NPOFMI                         | General                       | Non Preparable Orders For Missing Ingredients       | Count           | CSF2                 | -                            |
-| Number of NPOFMI order changed | General                       | Number of product substitution agreed with customer | Count           | CSF2                 | -                            |
-| Wrong orders ratio             | Quality                       | 1 - (Number of orders changed/NPOFMI)               | Number          | CSF2                 | -                            |
-| Pizzas per order               | General                       | Average number of pizzas in one order               | Number          | -                    | -                            |
-| Time to cook one order         | Service                       | Average time to cook one order                      | Time            | CSF2                 | -                            |
+| KPI name                       | KPI type (general, service..) | description                                                              | Unit of measure | CSF covered (if any) | Current value (if available) |
+| ------------------------------ | ----------------------------- | ------------------------------------------------------------------------ | --------------- | -------------------- | ---------------------------- |
+| NPOFMI                         | General                       | Non Preparable Orders For Missing Ingredients                            | Count           | CSF2                 | -                            |
+| Number of NPOFMI order changed | General                       | Number of product substitution agreed with customer                      | Count           | CSF2                 | -                            |
+| Wrong orders ratio             | Quality                       | 1 - (Number of orders changed/NPOFMI)                                    | Number          | CSF2                 | -                            |
+| Pizzas per order               | General                       | Average number of pizzas in one order                                    | Number          | -                    | -                            |
+| Time to cook one order         | Service                       | Average time to cook one order                                           | Time            | CSF2                 | -                            |
+| UC Order                       | Efficiency                    | (Infrastructure cost + Ingredients + Pizza Chef salary)/Number of orders | Euro            |                      | -                            |
 
+### Process 5: "Delivery"
+
+
+| KPI name             | KPI type (general, service..) | description                                                                    | Unit of measure | CSF covered (if any) | Current value (if available) |
+| -------------------- | ----------------------------- | ------------------------------------------------------------------------------ | --------------- | -------------------- | ---------------------------- |
+| LT to deliver        | Service                       | Time from order handed to the deliverer to order handed to the customer        | Time            | CSF1                 | -                            |
+| Orders delivered     | Service                       | Number of orders succesfully delivered to the customers                        | Count           | -                    | -                            |
+| Orders non delivered | Service                       | Number of orders unsuccesfully delivered to the customers                      | Count           | -                    | -                            |
+| Delivery Loss ratio  | Quality                       | Orders non delivered/(Orders delivered + orders non delivered)                 | Number          | CSF2                 | -                            |
+| Punctuality          | Service                       | Actual delivery time/estimated delivery time                                   | Number          | CSF2, CSF1           | -                            |
+| UC Delivery          | Efficiency                    | (Salary of all delivery employee + delivery cars maintenance)/Orders delivered | Euro            | -                    | -                            |
+| Distributed Flyers   | General                       | Number of distributed flyers                                                   | Count           | CSF3                 | -                            |
 # Summary analysis
-
-TODO:
 
 Critical points in the organization and their possible interaction with IS.
 
-IT alignment problems.
+- Hand management of post-it orders ticket in the kitchen by the pizza chef leads to two problems: wrong hand-sorting of orders by time (leading to latency in the production of an order) and physical loss of post-its in the messy environment of the kitchen (leading to complete loss of orders or loss of customer address, needed for the order delivery).
+- Absence of a way to keep track of the ingredients storage levels leads to the cashier accepting also orders that cannot be satisfied due to lack of the needed ingredients, causing customer unsatisfaction, damage of reputation and money loss.
+
+IT system is basically absent except for the just eat account.
