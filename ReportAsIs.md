@@ -122,9 +122,7 @@ expense in IT (Total) = expense in IT (employees) + expense in IT (fees) + expen
 
 ## Organizational type
 
-Argument if organization is: mechanical / learning
-
-Argument if organization is: entrepreneurial start up / divisionalized bureaucracy / etc
+The *Pizzeria due fratelli* organization is an entrepreneurial start up with a very low level of formalization (problems are handled on the fly without standard procedures) and a primitive hierarchical structure (all decisional power is in the hand of the owners)
 
 # Business Model Canvas
 
@@ -171,9 +169,7 @@ class Pizzerie2Fratelli {
 
 class Pizzeria {
   + ID
-  + address
-  + menù
-  
+  + address  
 }
 
 class Person {
@@ -221,7 +217,10 @@ class Product {
 
 class Ingredient {
   + ID
+  + Name
 }
+
+class Menu 
 
 class Review {
   + ID
@@ -233,11 +232,14 @@ Pizzeria "*" -- Pizzerie2Fratelli
 Person <|- PizzaChef
 Person <|- Cashier
 Person <|- DeliveryMan 
+Person <|- Customer
 DeliveryMan "+" -- Pizzeria : work in >
 Cashier "+" -- Pizzeria : work in >
 DeliveryMan -- "+" Vehicle
 Pizzeria -- "+" PizzaChef : work in >
 Pizzeria "*" -- PizzaChef : < manage
+Pizzeria -- Menu
+Product"*" -- "*" Menu
 TicketOrder "*" -- Cashier : < write
 TicketOrder "*" -- Customer
 TicketOrder "*" -- "+" Product : > has
@@ -250,16 +252,14 @@ Review "0..1" -- TicketOrder
 
 ## Functional view, processes
 
-List and describe key processes
 
-
-| Process name                      | Description (text)                                                               | Input                           | Output                                |
-| --------------------------------- | -------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------- |
-| **Inventory / restock**           | Check the missing ingredients, buy them and restock theinventory                 | ingredients request             | inventory restocked                   |
-| **Get new order**                 | Customer requests products, all the informations are written in the order ticket | order request                   | order ticket                          |
-| **Queue organization**            | Organize ticket orders in a sorted queue by delivery time                        | ticket order                    | ticket orders in an ordered queue     |
-| **Prepare products for an order** | Cook products and pack up them in pizza boxes                                    | scheduled order                 | pizza ready to be delivered/picked up |
-| Deliver order                     | Get the products ready to be delivered and ship them to the customer             | Products ready and order ticket | Product at customers house            |
+| Process name            | Description (text)                                                               | Input                           | Output                                |
+| ----------------------- | -------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------- |
+| **Inventory / restock** | Check the missing ingredients, buy them and restock theinventory                 | ingredients request             | inventory restocked                   |
+| **Get new order**       | Customer requests products, all the informations are written in the order ticket | order request                   | order ticket                          |
+| **Queue organization**  | Organize ticket orders in a sorted queue by delivery time                        | ticket order                    | ticket orders in an ordered queue     |
+| **Prepare order**       | Cook products and pack up them in pizza boxes                                    | scheduled order                 | pizza ready to be delivered/picked up |
+| **Deliver order**       | Get the products ready to be delivered and ship them to the customer             | Products ready and order ticket | Product at customers house            |
 
 (must be consistent with key processes box in BMC)
 
@@ -269,21 +269,22 @@ For processes that will be changed in the transition to To Be report BPMN model
 
 ### BPMN
 
-#### Invetory restock
+#### Inventory restock
 ![restock bpmn](./images/BPMN_ASIS_InventoryRestock.png)
 #### Get new order
 ![get new order bpmn](./images/BPMN_ASIS_GetNewOrder.png)
 
 #### Queue management
 ![queue management bpmn](./images/BPMN_ASIS_QueueManagement.png)
-#### Prepare products for an order
-![prepare products for an order bpmn](./images/BPMN_ASIS_PrepareProductsForAnOrder.png)
+#### Prepare order
+![Prepare order bpmn](./images/BPMN_ASIS_PrepareProductsForAnOrder.png)
+
+#### Delivery
+![delivery bpmn](./images/BPMN_ASIS_Delivery.png)
 
 ## IT  view
 
 ### Application portfolio
-
-List IT applications or services used
 
 | Application name     | Vendor (or internal if made internally) | Main functions         |
 | -------------------- | --------------------------------------- | ---------------------- |
@@ -299,27 +300,16 @@ List IT applications or services used
 
 @enduml
 ```
-UML deployment diagram, showing computational nodes, and allocation of applications + data clusters to nodes
-
-(data clusters == group of classes, from the data model, UML class diagram)
-
-(applications are the ones identified in application portfolio)
 
 ### Outsourcing
 
-TODO:
-
-Highlight which IT service is outsourced (if any)
+The service "JustEat" used to get orders is outsourced.
 
 # IT strategy
 
-TODO:
-
-Summarize the current IT strategy, discuss if it is consistent with the company strategy
+There is no IT strategy except for the partnership with JustEat.
 
 # Indicators
-
-TODO:
 
 ## CSF
 
@@ -342,28 +332,53 @@ CSF ( derived by us)
 
 TODO:
 
-| CSF ID | Type (domain, distinguishing, environment, contingency) | Textual description, link to strategy     | Related Metric(s)                                                                                             | Current value (if available)                                              |
-| ------ | ------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| CSF1   | Buisness domain                                         | fast delivery time of the customer orders | - Response time to phone calls <br>- number of pizzas produced per week <br>- mean time to transport an order | - 2 min <br>-  **X** pizza/week<br>- 8  min                               |
-| CSF2   | Buisness domain                                         | quality of the product                    | - complaints per week <br>-mean rating of JustEat reviews of last week<br>                                    | - **X** complaints/week <br>- **X** stars                                 |
-| CSF3   | Buisness domain                                         | Marketing efficiency                      | - new clients per week <br>  -sales per week<br>-number of distributed flyers per week                        | - **X** clients<br>-**X** pizzas sold per week<br>- **X** flyers per week |
+| CSF ID | Type (domain, distinguishing, environment, contingency) | Textual description, link to strategy     | Related Metric(s)                                                                                                               | Current value (if available)                                              |
+| ------ | ------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| CSF1   | Buisness domain                                         | fast delivery time of the customer orders | - Response time to phone calls and call duration <br>- number of pizzas produced per week <br>- mean time to transport an order | - 2 min <br>-  **X** pizza/week<br>- 8  min                               |
+| CSF2   | Buisness domain                                         | quality of the product and service                   | - complaints per week <br>-mean rating of JustEat reviews of last week<br>                                                      | - **X** complaints/week <br>- **X** stars                                 |
+| CSF3   | Buisness domain                                         | Marketing efficiency                      | - new clients per week <br>  -sales per week<br>-number of distributed flyers per week                                          | - **X** clients<br>-**X** pizzas sold per week<br>- **X** flyers per week |
 
 ## KPI
 
-TODO:
-### Process X
+**Time domain: one week**
+### Process 1: "Inventory Restock"
 
-(Process name must be consistent with IS view / Process view)
+| KPI name                    | KPI type (general, service..) | description                                                                     | Unit of measure | CSF covered (if any) | Current value (if available) |
+| --------------------------- | ----------------------------- | ------------------------------------------------------------------------------- | --------------- | -------------------- | ---------------------------- |
+| Shopping time               | Service                       | time spent in buying missing ingredients from departure from pizzeria to return | Time            | -                    | -                            |
+| shopping frequency          | General                       | Number of times shopping for missing product is needed                          | Count           | -                    | -                            |
+| Ingredient Requests         | General                       | Number of time a product needs to be restocked                                  | Count           | -                    | -                            |
+| Ingredient Bought           | General                       | Number of time a requested product is bought                                    | Count           | -                    | -                            |
+| Restocked Ingredients Ratio | Quality                       | Ingredients bought/ingredient requested                                         | Number          | CSF2                 | -                            |
 
-KPI table for process X
 
-| KPI name | KPI type (general, service..) | description | Unit of measure | CSF covered (if any) | Current value (if available) |
-| -------- | ----------------------------- | ----------- | --------------- | -------------------- | ---------------------------- |
-|          |                               |             |                 |                      |                              |
+### Process 2: "Get New Order"
 
-### Process Y
+| KPI name             | KPI type (general, service..) | description                     | Unit of measure | CSF covered (if any) | Current value (if available) |
+| -------------------- | ----------------------------- | ------------------------------- | --------------- | -------------------- | ---------------------------- |
+| Order quantity       | General                       | Number of orders received       | Count           | CSF3                 | -                            |
+| Wrong Order quantity | General                       | Number of orders signed wrong   | Count           | CSF2                 | -                            |
+| Odered Products      | General                       | Number of products ordered      | Count           | CSF3                 | -                            |
+| Time to order        | Service                       | Time spent getting orders infos | Time            | CSF1                 | -                            |
 
-To be repeated for each relevant process (notably processes that will be changed in To Be)
+### Process 3: "Queue managment"
+
+| KPI name          | KPI type (general, service..) | description                                      | Unit of measure | CSF covered (if any) | Current value (if available) |
+| ----------------- | ----------------------------- | ------------------------------------------------ | --------------- | -------------------- | ---------------------------- |
+| Ticket Input      | General                       | Ticket handed from the cashier to the pizza chef | Count           | -                    | -                            |
+| Ticket Output     | General                       | Ticket processed from the pizza chef             | Count           | -                    | -                            |
+| Ticket loss ratio | Quality                       | 1 - (Ticket Output/Ticket Input)                 | Number          | CSF2                 | -                            |
+
+
+### Process 4: "Prepare order"
+
+| KPI name                       | KPI type (general, service..) | description                                         | Unit of measure | CSF covered (if any) | Current value (if available) |
+| ------------------------------ | ----------------------------- | --------------------------------------------------- | --------------- | -------------------- | ---------------------------- |
+| NPOFMI                         | General                       | Non Preparable Orders For Missing Ingredients       | Count           | CSF2                 | -                            |
+| Number of NPOFMI order changed | General                       | Number of product substitution agreed with customer | Count           | CSF2                 | -                            |
+| Wrong orders ratio             | Quality                       | 1 - (Number of orders changed/NPOFMI)               | Number          | CSF2                 | -                            |
+| Pizzas per order               | General                       | Average number of pizzas in one order               | Number          | -                    | -                            |
+| Time to cook one order         | Service                       | Average time to cook one order                      | Time            | CSF2                 | -                            |
 
 # Summary analysis
 
