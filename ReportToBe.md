@@ -91,7 +91,6 @@ class Ingredient {
 }
 
 Product "+" -- "*" TicketOrder : ordered in >
-Product "*" -- "*" TicketOrder : possible substitude >
 Ingredient "+" -- "*" Product 
 @enduml
 ```
@@ -105,7 +104,19 @@ Write no change if the model remains as in As Is
 Report the PICK chart (see process redesign chapter)  used to select the process to be changed and argument about it
 
 ![PICK chart](./images/PICK_chart_TO_BE.jpg)
-### Process y
+
+#### Inventory restock
+![restock bpmn](./images/BPMN_TOBE_InventoryRestock.png)
+#### Get new order
+![get new order bpmn](./images/BPMN_TOBE_GetNewOrder.png)
+
+#### Queue management
+![queue management bpmn](./images/BPMN_TOBE_QueueManagement.png)
+#### Prepare order
+![Prepare order bpmn](./images/BPMN_TOBE_PrepareProductsForAnOrder.png)
+
+#### Delivery
+![delivery bpmn](./images/BPMN_TOBE_Delivery.png)
 
 For each changed process report the new BPMN (highlight where are the changes and why) and  the software functions needed by the IS, as follows
 
