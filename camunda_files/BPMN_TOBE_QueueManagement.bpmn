@@ -21,16 +21,16 @@
       <bpmn:incoming>Flow_1ox4nvr</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1xc50zk" sourceRef="Event_1sli37h" targetRef="Activity_095jlr2" />
-    <bpmn:sequenceFlow id="Flow_03i2o84" sourceRef="Activity_095jlr2" targetRef="Activity_1hvo19n" />
     <bpmn:sequenceFlow id="Flow_1ox4nvr" sourceRef="Activity_1hvo19n" targetRef="Event_1y2dy1i" />
-    <bpmn:manualTask id="Activity_095jlr2" name="check products and delivery time in the ticket order">
+    <bpmn:sequenceFlow id="Flow_03i2o84" sourceRef="Activity_095jlr2" targetRef="Activity_1hvo19n" />
+    <bpmn:serviceTask id="Activity_095jlr2" name="check products and delivery time in the ticket order">
       <bpmn:incoming>Flow_1xc50zk</bpmn:incoming>
       <bpmn:outgoing>Flow_03i2o84</bpmn:outgoing>
-    </bpmn:manualTask>
-    <bpmn:manualTask id="Activity_1hvo19n" name="insert ticket order in the ticket order queue">
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_1hvo19n" name="insert ticket order in the ticket order queue">
       <bpmn:incoming>Flow_03i2o84</bpmn:incoming>
       <bpmn:outgoing>Flow_1ox4nvr</bpmn:outgoing>
-    </bpmn:manualTask>
+    </bpmn:serviceTask>
     <bpmn:textAnnotation id="TextAnnotation_1hnvd5w">
       <bpmn:text>Orders queue must be sorted by delivery time and FIFO on ticket order  scheduled for the same delivery time</bpmn:text>
     </bpmn:textAnnotation>
@@ -74,10 +74,10 @@
       <bpmndi:BPMNShape id="TextAnnotation_1hnvd5w_di" bpmnElement="TextAnnotation_1hnvd5w">
         <dc:Bounds x="760" y="350" width="162" height="82" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1uylrda_di" bpmnElement="Activity_095jlr2">
+      <bpmndi:BPMNShape id="Activity_1rlq8s2_di" bpmnElement="Activity_095jlr2">
         <dc:Bounds x="440" y="220" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1wkn2fm_di" bpmnElement="Activity_1hvo19n">
+      <bpmndi:BPMNShape id="Activity_16t41q5_di" bpmnElement="Activity_1hvo19n">
         <dc:Bounds x="680" y="220" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_12rwvvw_di" bpmnElement="Association_12rwvvw">
