@@ -31,7 +31,6 @@ Keep this section and subsections, if there is no change just write 'no change'.
 'no change'
 ## Culture
 - "striving for customer satisfaction"
-- "efficiency good lmao"
 ## Structure
 'no change'
 ### IT office
@@ -107,23 +106,38 @@ Report the PICK chart (see process redesign chapter)  used to select the process
 
 #### Inventory restock
 ![restock bpmn](./images/BPMN_TOBE_InventoryRestock.png)
+- The shopping list is easier to do than in the ASIS scenario since the state of the product is continuously updated during working time
+- The shopping list can be produced automatically by the system.
 #### Get new order
 ![get new order bpmn](./images/BPMN_TOBE_GetNewOrder.png)
-
+- Order is no more registered through a post it but instead is inserted in a form, leaving less space to human error (forgetting to ask for something) in getting the infos 
+- The order can be composed only with products formed by ingredients that are available.
+- A created order becomes now visible to the pizza chef automatically from a dedicated screen in the kitchen 
+- Orders not being physical beings are now immune to loss or damage.
 #### Queue management
 ![queue management bpmn](./images/BPMN_TOBE_QueueManagement.png)
+- Differently from the ASIS scenario, this is completely automatized by the system.
 #### Prepare order
 ![Prepare order bpmn](./images/BPMN_TOBE_PrepareProductsForAnOrder.png)
+- since the system knows what products are produced with each ingredient, the chef can signal through a dedicated interface the unavailability of certain ingredients and the system will automatically compute the unavailability of the products communicating to Just Eat and the cashier interface.
+- the order can be changed by the cashier through the interface.
 
 #### Delivery
 ![delivery bpmn](./images/BPMN_TOBE_Delivery.png)
+- the deliverer is less prone to lose ticket orders since are accessible via a dedicated section of the webapp, through their smartphone.
 
 For each changed process report the new BPMN (highlight where are the changes and why) and  the software functions needed by the IS, as follows
 
-| Activity in BPMN | Supporting Software functions |
-| --- | --- |
-|   |   |
-|   |   |
+| Activity in BPMN                                | Supporting Software functions                                                                                        |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Register a ticket order                         | - show new ticket order form <br> - create new ticket order object                                                   |
+| Show orders                                     | - get orders <br> - print order list <br> -show order details                                                        |
+| Update order                                    | - setters for ticket order objects                                                                                   |
+| Schedule orders                                 | - Priority queue list of ticket orders <br> - compute order priority by delivery time and estimated preparation time |
+| Update ingredients availability                 | - setters for Ingredients                                                                                            |
+| Show shopping list                              | - get list of orders with state different from "full"                                                                |
+| Request product availability update in just eat | - Request to set product available/unavailable to Just Eat                                                           |
+| Show order delivery info                        | - Get order delivery info                                                                                            |
 
 ## IT view
 
@@ -137,25 +151,32 @@ Otherwise list here the new portfolio, highlighting new applications, and abando
 
 Describe the applications considered for the selection
 
-| Application name | Vendor | Description | Price model and fees |
-| --- | --- | --- | --- |
-|   |   |   |   |
+| Application name             | Vendor    | Description                                                        | Price model and fees |
+| ---------------------------- | --------- | ------------------------------------------------------------------ | -------------------- |
+| SirioTrade                   | COMPASS   | Manages only accounting, orders at the table and menu composition. | fixed price          |
+| Simphony POS for Restaurants | ORACLE    | Manages everything                                                 | time and material    |
+| OpenBravo                    | OPENBRAVO | Manages everything                                                 | time and material    |
 
 Describe here how the selection of the new application was made
 
-| Criterion | Application1 | Application2 | Application x |
-| --- | --- | --- | --- |
-|   |   |   |   |
+| Criterion                 | SirioTrade | Simphony POS for Restaurants | OpenBravo |
+| ------------------------- | ---------- | ---------------------------- | --------- |
+| Inventory Management      |            | x                            | x         |
+| Kitchen / Menu Management | x          | x                            | x         |
+| Point of Sale (POS)       | x          | x                            | x         |
+| Order List Management     |            | x                            |           |
 
-Alternatively argue that the new application should be developed custom for the company.
+
+
+**A custom made application is needed.** this conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this is an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need. 
 
 #### Coverage
 
 Show how the selected application provides the software functions needed (as identified in Functional view, processes section), discuss gaps, if any
 
 | Software function needed (from process view) | Software function provided by application selected | Gap analysis |
-| --- | --- | --- |
-|   |   |   |
+| -------------------------------------------- | -------------------------------------------------- | ------------ |
+|                                              |                                                    |              |
 
 
 
@@ -184,8 +205,8 @@ Discuss if there should be changes to it.
 Report only indicators that are supposed to change, argument on why the change has an effect on them, report how much the indicator could change. Do not forget the unit cost of the product / service.
 
 | Indicator (Csf, Kpi) name | Effect | Quantitative estimate of variation (absolute, %) |
-| --- | --- | --- |
-|   |   |   |
+| ------------------------- | ------ | ------------------------------------------------ |
+|                           |        |                                                  |
 
 ## TCO, ROI and Break even
 
