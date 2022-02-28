@@ -184,6 +184,31 @@ Show how the selected application provides the software functions needed (as ide
 
 Write no change in case. Otherwise report the new deployment diagram and highlight the changes
 
+```plantuml
+@startuml
+node Just_eat_server
+node Pizzeria_server
+node Deliverer_smartphone
+node Cashier_pc
+node Chef_device
+
+artifact JustEat_app
+artifact browser
+artifact PizzeriaManagmentApp
+
+Just_eat_server -- Chef_device
+Pizzeria_server -r- Just_eat_server
+JustEat_app -u- Chef_device
+Pizzeria_server -- Cashier_pc
+Pizzeria_server -- Deliverer_smartphone
+Pizzeria_server -- Chef_device 
+Pizzeria_server -u- PizzeriaManagmentApp
+[Deliverer_smartphone]  -- browser
+Chef_device  -- browser
+Cashier_pc  -- browser
+@enduml
+```
+
 #### Integration
 
 In case a new application is introduced discuss how integration happens in terms of
