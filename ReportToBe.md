@@ -168,7 +168,8 @@ Describe here how the selection of the new application was made
 
 
 
-**A custom made application is needed.** this conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this is an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need. 
+**A custom made application is needed.** this conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this is an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need.
+Its development will be outsourced to a consulting company with an *una tantum* payment estimated around 15k$.
 
 #### Coverage
 
@@ -194,7 +195,7 @@ node Chef_device
 
 artifact JustEat_app
 artifact browser
-artifact PizzeriaManagmentApp
+artifact PizzeriaManagementApp
 
 Just_eat_server -- Chef_device
 Pizzeria_server -r- Just_eat_server
@@ -202,8 +203,8 @@ JustEat_app -u- Chef_device
 Pizzeria_server -- Cashier_pc
 Pizzeria_server -- Deliverer_smartphone
 Pizzeria_server -- Chef_device 
-Pizzeria_server -u- PizzeriaManagmentApp
-[Deliverer_smartphone]  -- browser
+Pizzeria_server -u- PizzeriaManagementApp
+Deliverer_smartphone  -- browser
 Chef_device  -- browser
 Cashier_pc  -- browser
 @enduml
@@ -217,21 +218,36 @@ Data exchange (which data is exchanged)
 
 Control mechanism (mechanism used by applications to interact, ex message passing, rpc, etc)
 
+The custom made app PizzeriaManagementApp will be deployed in a cloud server rented, Employees will have their accounts and will be able to perform their tasks through a browser in their devices.
+
+- Data exchange
+  - Orders received and products availability communicated between cashiers and chefs through the web app 
+  - Product availability communicated from chefs and just eat app through autmatic detection of unavailable products from pizzerias server to JustEat
+
+- Control mechanism
+  - PizzeriaManagementApp will communicate to JustEat with JustEat exposed APIs.
+
 # IT strategy
 
-Discuss if there should be changes to it.
+The development and maintenance of the webapp will be outsourced to a consulence.
+The hosting of the server will be outsourced to a cloud hosting provider by renting it.
 
 # Effect of change(s)
 
 ## Effect on KPIs and CSFs
 
-(remark, KPIs and CSFs should not depend on the change, but should remain the ones defined in the As Is section � the goal being to compare the effect of the change on the same indicators)
+(remark, KPIs and CSFs should not depend on the change, but should remain the ones defined in the As Is section the goal being to compare the effect of the change on the same indicators)
 
 Report only indicators that are supposed to change, argument on why the change has an effect on them, report how much the indicator could change. Do not forget the unit cost of the product / service.
 
-| Indicator (Csf, Kpi) name | Effect | Quantitative estimate of variation (absolute, %) |
-| ------------------------- | ------ | ------------------------------------------------ |
-|                           |        |                                                  |
+| Indicator (Csf, Kpi) name                | Effect                                                                                                                                                                                                                                                        | Quantitative estimate of variation (absolute, %) |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Wrong Order quantity                     | Form structure will provide error prevention and standardization of the ticket order                                                                                                                                                                          | -90%                                             |
+| Time to order                            | Standardization of order structure will lead to less "thinking" speeding up the process                                                                                                                                                                       |            -10%                                      |
+| Ticket loss ratio                        | Digital ticket orders cannot be lost differenty from post/its                                                                                                                                                                                                 | -100%                                            |
+| NPOFMI/Wrong orders ratio                | Automatic logical inference of unavailability of a certain product through the analysis of the ingredients level communicated from the chef will lead to an extreme diminuition of the Non Preparable Orders For Missing Ingredients                          | -90% / -80%                                      |
+| Orders non delivered/Delivery loss ratio | Ticket order standardization will diminish ticket orders without customer information, ticket order lost by the deliverer becomes impossible, the remaining point of failure is the client giving wrong informations or the cashier inputting a wrong address | -80% / -50%                                      |
+|                                          |                                                                                                                                                                                                                                                               |                                                  |
 
 ## TCO, ROI and Break even
 
