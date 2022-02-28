@@ -296,7 +296,13 @@ For processes that will be changed in the transition to To Be report BPMN model
 
 ```plantuml
 @startuml
-[Just eat server] -- [pizza chef's mobile app]
+node Just_eat_server
+node Chef_device
+
+artifact JustEat_app
+
+Just_eat_server -- Chef_device
+JustEat_app -l- Chef_device
 
 @enduml
 ```
