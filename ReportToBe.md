@@ -62,9 +62,6 @@ other wise detail only the box(es) that change
 
 Ticket order now have an additional field: customer number
 
-@TODO: review this, is it necessary?  
-Product has another link for substitue product chosen by the customer
-
 Quantity in Ingredient (empty low  medium full)
 
 ```plantuml
