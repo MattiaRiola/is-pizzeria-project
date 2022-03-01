@@ -23,27 +23,25 @@ A web app will be developed to automatize and reduce human errors in the followi
 Keep this section and subsections, if there is no change just write 'no change'.  In case there is a change detail it.
 
 ## Size
-'no change'
+No change
 
 ## Products services
-'no change'
+No change
 ## Goal, goal type, vision, mission, strategy
-'no change'
+No change
 ## Culture
 - "striving for customer satisfaction"
 ## Structure
-'no change'
+No change
 ### IT office
 Outsourced management of the application and technical assistance by IT consultancy company
 ## Formalization specialization centralization
-'no change'
+No change
 ## Organizational type
-'no change'
+No change
 # Business model canvas
 
-if there is no change just write 'no change'
-
-other wise detail only the box(es) that change
+Boxes that change:
 
 **Key Partnership:**
 - Added to the key partners the consultancy company that produces and maintain the web app
@@ -93,11 +91,9 @@ Ingredient "+" -- "*" Product
 
 ## Functional view, processes
 
-Write no change if the model remains as in As Is
+No change
 
 ### Process selection
-
-Report the PICK chart (see process redesign chapter)  used to select the process to be changed and argument about it
 
 ![PICK chart](./images/PICK_chart_TO_BE.jpg)
 
@@ -140,9 +136,7 @@ For each changed process report the new BPMN (highlight where are the changes an
 
 ### Application portfolio
 
-Write no change if the portfolio remains as in As Is
-
-Otherwise list here the new portfolio, highlighting new applications, and abandoned applications
+No change
 
 #### Selection
 
@@ -165,7 +159,7 @@ Describe here how the selection of the new application was made
 
 
 
-**A custom made application is needed.** this conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this may be an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need.
+**A custom made application is needed.** This conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this may be an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need.
 Its development will be outsourced to a consulting company with an *una tantum* payment estimated around 15k$ and a very low price of maintenance.
 
 The Coverage below is evaluated considering oracle simphony
@@ -176,16 +170,14 @@ Show how the selected application (Oracle simphony) provides the software functi
 
 | Software function needed (from process view) | Software function provided by application selected   | Gap analysis                                                                                              |
 | -------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Inventory Management                         | Inventory management                                 | it doesn't have an easy and fast gui for the chef to comunicate in run time when a product is running out |
+| Inventory Management                         | Inventory management                                 | It doesn't have an easy and fast gui for the chef to comunicate in run time when a product is running out |
 | Kitchen / Menu Management                    | Invenctory Management / Menu management              | -                                                                                                         |
-| POS                                          | serie workstation                                    | -                                                                                                         |
-| Order List Management                        | Sistemi di visualizzazione per le cucine multicanale | -                                                                                                         |
+| POS                                          | Series workstation                                    | -                                                                                                         |
+| Order List Management                        | Multi-channel visualization system for the kitchens | -                                                                                                         |
 
 Note: if the price of oracle application is too high we can opt for a custom made application from an it consulting company, in this case the app should be able to provide every function we need with no gap
 
 ### Technological view
-
-Write no change in case. Otherwise report the new deployment diagram and highlight the changes
 
 ```plantuml
 @startuml
