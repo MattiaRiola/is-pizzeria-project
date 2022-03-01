@@ -165,18 +165,23 @@ Describe here how the selection of the new application was made
 
 
 
-**A custom made application is needed.** this conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this is an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need.
-Its development will be outsourced to a consulting company with an *una tantum* payment estimated around 15k$.
+**A custom made application is needed.** this conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this may be an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need.
+Its development will be outsourced to a consulting company with an *una tantum* payment estimated around 15k$ and a very low price of maintenance.
+
+The Coverage below is evaluated considering oracle simphony
 
 #### Coverage
 
-Show how the selected application provides the software functions needed (as identified in Functional view, processes section), discuss gaps, if any
+Show how the selected application (Oracle simphony) provides the software functions needed (as identified in Functional view, processes section), discuss gaps, if any
 
-| Software function needed (from process view) | Software function provided by application selected | Gap analysis |
-| -------------------------------------------- | -------------------------------------------------- | ------------ |
-|                                              |                                                    |              |
+| Software function needed (from process view) | Software function provided by application selected   | Gap analysis                                                                                              |
+| -------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Inventory Management                         | Inventory management                                 | it doesn't have an easy and fast gui for the chef to comunicate in run time when a product is running out |
+| Kitchen / Menu Management                    | Invenctory Management / Menu management              | -                                                                                                         |
+| POS                                          | serie workstation                                    | -                                                                                                         |
+| Order List Management                        | Sistemi di visualizzazione per le cucine multicanale | -                                                                                                         |
 
-
+Note: if the price of oracle application is too high we can opt for a custom made application from an it consulting company, in this case the app should be able to provide every function we need with no gap
 
 ### Technological view
 
@@ -240,7 +245,7 @@ Report only indicators that are supposed to change, argument on why the change h
 | Indicator (Csf, Kpi) name                | Effect                                                                                                                                                                                                                                                        | Quantitative estimate of variation (absolute, %) |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | Wrong Order quantity                     | Form structure will provide error prevention and standardization of the ticket order                                                                                                                                                                          | -90%                                             |
-| Time to order                            | Standardization of order structure will lead to less "thinking" speeding up the process                                                                                                                                                                       |            -10%                                      |
+| Time to order                            | Standardization of order structure will lead to less "thinking" speeding up the process                                                                                                                                                                       | -10%                                             |
 | Ticket loss ratio                        | Digital ticket orders cannot be lost differenty from post/its                                                                                                                                                                                                 | -100%                                            |
 | NPOFMI/Wrong orders ratio                | Automatic logical inference of unavailability of a certain product through the analysis of the ingredients level communicated from the chef will lead to an extreme diminuition of the Non Preparable Orders For Missing Ingredients                          | -90% / -80%                                      |
 | Orders non delivered/Delivery loss ratio | Ticket order standardization will diminish ticket orders without customer information, ticket order lost by the deliverer becomes impossible, the remaining point of failure is the client giving wrong informations or the cashier inputting a wrong address | -80% / -50%                                      |
@@ -248,14 +253,54 @@ Report only indicators that are supposed to change, argument on why the change h
 
 ## TCO, ROI and Break even
 
-Define the TCO for the change (use a 3 -5 years horizon)
+In the following analysis we consider the custom made application
 
-Estimate costs (from TCO) and savings, and discuss the number of years needed to recover the investment
+| Phsae          | Description                                                                          |
+| -------------- | ------------------------------------------------------------------------------------ |
+| Construction C | Cost for development/acquisition of the software application and the hardware needed |
+| Deployment D   | Cost for deployment of software funcions and training of employees                   |
+| Operation O    | Cost for the infrasructure operation (electricity)                                   |
+| Dismissal DS   | Cost for uninstalling application and infrastructure dismissal                       |
+| Gain  G        | Gain considering the acquisition of new clients because of the better reputation     |
+| Saving S       | The saving money considering the upgrade of the IS (no paper post-it are needed)     |
 
+
+
+Assuming:
+| role         | num of employees | estimate training time |
+| ------------ | ---------------- | ---------------------- |
+| pizza chef   | 3                | 8h                     |
+| cashier      | 3                | 8h                     |
+| delivery man | 12               | 1h                     |
+ total:                  8 * 3 + 8 * 3 + 1 * 12 = 60h 
+
+ - Cost+D = cost of the application + estimate training time * salary = 15k€ + 60h * 7€/h = 15420 €
+ - O + M = about 3k€
+ - S = CostOfTicketOrderPostitPerYear
+ - The reputation of the pizzerias can't be evalued in saving money but in can be evaluated in `number of gained fidelity customers` in the year $y$ :  "$C_y$" that will not be lost and new acquired customers
+   - `estimated # lost fidelity customers in a year` : 10 (because of errors in the orders)
+   - `estimated # new fidelity customers in a year y`: this is incremental because the reputation will increase over time (i.e: 15, 21, 30, 45, 60 )
+   - `average gain from a single fidelity customer`: $C_€ = 10 €/month = 120€/year$
+ - G =$ \sum_{n=1}^{y} C_n *C_€ $ 
+   - The customer will 
+
+
+|        | Year 1           | Year 2                | Year 3                    | Year 4                        | Year 5                           |
+| ------ | ---------------- | --------------------- | ------------------------- | ----------------------------- | -------------------------------- |
+| Cost   | Cost,D,O,M       | O,M                   | O,M                       | O,M                           | O,M                              |
+| $C_y$  | 10+15=25         | 10+21=31              | 10+30=40                  | 10+45=55                      | 10+60=70                         |
+| Saving | S                | S                     | S                         | S                             | S                                |
+| Gain   | 25 * 120 = 3000€ | (31+25) * 120 = 6720€ | (25+31+40) * 120 = 11520€ | (25+31+40+55) * 120 =  18120€ | (25 +31+40+55+70) * 120 = 26520€ |
+| Total  | -15060€          | -10980€               | -2100€                    | 13380€                        | 36900€                           |
+
+if we consider the estimated gain from the new customers acquired thanks to the increase in reputation, **3 years are needed to recover the initial cost**
 ## Risks
 
-Discuss the main risks (technological, organizational, human factors) related to the change, and what can be done to reduce them
+The main risks are related to employees, they may not understand why the use of an IS is useful and they may not want to change their habits (especially for the older employees).
+In order to encourage the employees the hours spent in training must be paid (in fact the training cost is considered in the deployment cost)
 
 # Conclusion
 
-In summary, why the organization should buy (and pay for) your proposal of change?
+The organization should change in this way in order to increase the reputation of the pizzerias. In this way the pizzeria can easly beat the competitors and acquire new customers.
+The Chef can focus on the preparation of the products without thining about the order queue.
+The Cashier will have a more organized work method to register orders and will have less complaints from not dissatisfied customers
