@@ -21,14 +21,14 @@ about 1.050.000€ of all the pizzerias
 
 ## Size
 
-3 employees full time (pizza chefs and owners of the company)
-3 employees full time (delivery man/cashier)
-6 employees part time 50% (delivery man)
-6 employees part time 10% ("jolly" delivery man)
+3 employees full time (pizza chefs and owners of the company) = 3 FTE
+3 employees full time (delivery man/cashier) = 3 FTE
+6 employees part time 50% (delivery man) = 3 FTE
+6 employees part time 10% ("jolly" delivery man) = 0,6 FTE
 
-3+1,5+3+0,6 = 8,1
+3+3+3+0,6 = 9,6
 
-8,1 FTE, year 2018
+9,6 FTE, year 2018
 
 ## Products, services
 
