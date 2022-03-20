@@ -273,8 +273,9 @@ Assuming:
    - `estimated # lost fidelity customers in a year` : 10 (because of errors in the orders)
    - `estimated # new fidelity customers in a year y`: this is incremental because the reputation will increase over time (i.e: 15, 21, 30, 45, 60 )
    - `average gain from a single fidelity customer`: $C_€ = 10 €/month = 120€/year$
- - G =$ \sum_{n=1}^{y} C_n *C_€ $ 
-   - The customer will 
+ - G =$ \sum_{n=1}^{y} C_n *C_€ $
+   - where C_n = estimated # lost fidelity customers in a year + estimated # new fidelity customers in the year n 
+     - *(i.e. in the year 1 C_1 = 15 + 10 = 25 -> G = 25*120€ = 3000€;  in the year 2 C_2 = C_1 + 10 + 21 =  (25+10+21)*120€ = 6720€)*
 
 
 |        | Year 1           | Year 2                | Year 3                    | Year 4                        | Year 5                           |
