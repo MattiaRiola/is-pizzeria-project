@@ -7,13 +7,13 @@ Model of Organization: To Be
 Here describe at high level the change(s), and their motivation. Link with critical points identified in As Is analysis
 
 **To contrast order loss and mischeduling of orders**
-A web app will be developed to automatize and reduce human errors in the following events:
-- A section of the web applications will be used by the pizza chef to signal the status empty/low/medium/full of the ingredients, this will be useful for:
+An existing restaurant-management product will be introduced to automatize and reduce human errors in the following events:
+- The product should offer to the pizza chef a way to signal the status empty/low/medium/full of the ingredients, this will be useful for:
   - Giving the cashier the ability to register only orders that can be satisfied reaching an agreement with the client at ordering time.
   - Automatically create a shopping list for the restock. 
-- Orders will be registered by the cashier in the system with a dedicated form instead of writing the infos by hand on paper post-its.
-- Registered orders will be visible by the pizza chef in the kitchen and automatically scheduled by the system 
-- Orders information will be visible by the deliverers in a dedicated page of the webapp through their smartphones.
+- Orders will be registered by the cashier in the system with an automatic and standardized input instead of writing the infos by hand on paper post-its.
+- Registered orders should be visible by the pizza chef in the kitchen and automatically scheduled by the system 
+- Orders information should be visible by the deliverers through their smartphones.
 - Register customer to get customer informations only once in order to:
   - build loyalty of the customer by offering loyalty prizes.
   - speed up ordering process
@@ -30,7 +30,7 @@ No change
 ## Goal, goal type, vision, mission, strategy
 No change
 ## Culture
-- "striving for customer satisfaction"
+- "Striving for customer satisfaction"
 ## Structure
 No change
 ### IT office
@@ -44,10 +44,10 @@ No change
 Boxes that change:
 
 **Key Partnership:**
-- Added to the key partners the consultancy company that produces and maintain the web app
+- Added to the key partners the company that produces and maintain the web app
 
 **Cost structure**
-- Added to the cost structue the maintenance of the web app
+- Added to the cost structue the maintenance of the web app/monthly fees for the service
 
 **Key Resources**
 - Added to the Key Resources the web app
