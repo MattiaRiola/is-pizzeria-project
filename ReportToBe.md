@@ -142,25 +142,34 @@ No change
 
 Describe the applications considered for the selection
 
-| Application name             | Vendor    | Description                                                        | Price model and fees |
-| ---------------------------- | --------- | ------------------------------------------------------------------ | -------------------- |
-| SirioTrade                   | COMPASS   | Manages only accounting, orders at the table and menu composition. | fixed price          |
-| Simphony POS for Restaurants | ORACLE    | Manages everything                                                 | time and material    |
-| OpenBravo                    | OPENBRAVO | Manages everything                                                 | time and material    |
+| Application name             | Vendor           | Description                                                                       | Price model and fees                                     |
+| ---------------------------- | ---------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| SirioTrade                   | COMPASS          | Manages only accounting, orders at the table and menu composition.                | fixed price                                              |
+| Simphony POS for Restaurants | ORACLE           | Manages everything                                                                | monthly fee 55 €/mon                                     |
+| OpenBravo                    | OPENBRAVO        | Manages everything                                                                | monthly fee                                              |
+| Gloria Food                  | ORACLE           | Manages online orders, mobile custom application, restaurant website and payments | monthly fee 60 €/mon                                     |
+| SquareUp                     | Square           | Manages online orders, restaurant website and payments                            | monthly fee 12 €/mon + (2.9% + 30 cents) per transaction |
+| LightSpeed Restaurant        | LightSpeed       | Restaurant website and payments, menu composition, inventory management           | monthly fee 39 usd/mon + (2.6% + 10 cents)               |
+| Loyverse                     | Loyalty Universe | Manages online orders, restaurant website and payments                            | monthly fee 34 usd/mon per store                         |
+
+
 
 Describe here how the selection of the new application was made
 
-| Criterion                 | SirioTrade | Simphony POS for Restaurants | OpenBravo |
-| ------------------------- | ---------- | ---------------------------- | --------- |
-| Inventory Management      |            | x                            | x         |
-| Kitchen / Menu Management | x          | x                            | x         |
-| Point of Sale (POS)       | x          | x                            | x         |
-| Order List Management     |            | x                            |           |
+| Criterion                               | SirioTrade | Simphony POS for Restaurants | OpenBravo | Gloria Food | SquareUp | LightSpeed Restaurant | Loyverse |
+| --------------------------------------- | ---------- | ---------------------------- | --------- | ----------- | -------- | --------------------- | -------- |
+| Inventory Management                    |            | x                            | x         |             | x        | x                     | x        |
+| Kitchen / Menu Management               | x          | x                            | x         | x           | x        | x                     | x        |
+| Point of Sale (POS)                     | x          | x                            | x         |             | x        | x                     | x        |
+| Order List Management (Kitchen Display) |            | x                            |           | x           | x        | x                     | x        |
+| Just eat integration                    |            | x                            | x         | x           |          |                       |          |
+| Provides custom website                 |            |                              |           | x           | x        |                       |          |
+| Doesn't need proprietary HW             |            |                              |           | x           | x        |                       |          |
 
 
 
-**A custom made application is needed.** This conclusion is reached through the analysis of the competitors proposals. even though Simphony POS would cover all of our needs it would also mean for the pizzerias to buy IT hardware that supports it from ORACLE and this may be an high money investment where the value is represented by the access to a lot of functions (Financial analysis, cloud hosting of records, table service assistance, ...) that the activity doesn't need.
-Its development will be outsourced to a consulting company with an *una tantum* payment estimated around 15k$ and a very low price of maintenance.
+
+- Out of all the considered solutions, the one offering all the needed functions is The ORACLE product "Simphony POS"  but we're excluding it because it needs proprietary hardware to run.
 
 The Coverage below is evaluated considering oracle simphony
 
@@ -168,11 +177,11 @@ The Coverage below is evaluated considering oracle simphony
 
 Show how the selected application (Oracle simphony) provides the software functions needed (as identified in Functional view, processes section), discuss gaps, if any
 
-| Software function needed (from process view) | Software function provided by application selected   | Gap analysis                                                                                              |
-| -------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Inventory Management                         | Inventory management                                 | It doesn't have an easy and fast gui for the chef to comunicate in run time when a product is running out |
-| Kitchen / Menu Management                    | Invenctory Management / Menu management              | -                                                                                                         |
-| POS                                          | Series workstation                                    | -                                                                                                         |
+| Software function needed (from process view) | Software function provided by application selected  | Gap analysis                                                                                              |
+| -------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Inventory Management                         | Inventory management                                | It doesn't have an easy and fast gui for the chef to comunicate in run time when a product is running out |
+| Kitchen / Menu Management                    | Invenctory Management / Menu management             | -                                                                                                         |
+| POS                                          | Series workstation                                  | -                                                                                                         |
 | Order List Management                        | Multi-channel visualization system for the kitchens | -                                                                                                         |
 
 Note: if the price of oracle application is too high we can opt for a custom made application from an it consulting company, in this case the app should be able to provide every function we need with no gap
