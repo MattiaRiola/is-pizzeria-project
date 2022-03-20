@@ -100,21 +100,22 @@ There is no IT/IS office.
 The IT part of this organization is an external online food order service (just eat).
 
 
-The activities for inventory, accounting and restock are managed by the pizza chef (producing only handwritten notes on paper) 
+The activities for inventory and accounting are managed by the pizza chef (producing only handwritten notes on paper)
+Restock is carried out by the cashier.
 
 
-estimation of expense in IS:
+Estimation of expense in IS:
 
-just eat paper = 7,5€/month * 3 = 270€ per year 
-ticket order post-it + pens = 10€/month * 3 = 360€ per year 
-expense IS (paper) = 360+270 = 630€<br>
-num working days in a year = about 330 days
-Average Person hours for IS per working day = about 6 hours per pizzeria (considering order management and inventory) * 3 pizzerias = 18
-Salary [€/hours] = 7€/hours
-expense in IS (employees) = Salary * person hours per working day * num working days in a year = 7 * 18 * 330 = 41580€ per year <br>
-expense in IS (Total) = expense in IS (employees) + expense IS (paper) =  41580€ + 630€ = 42210€
-**expense in IS (Total) = 42210€**<br>
-**Report ratio: expense in IS / Turn over = 42210/1050000 = 0,0402**
+**Just eat paper** = 7,5€/month * 3 = 270€ per year, ("Just eat paper" is a special kind of thermal paper needed to print from JustEat terminal device)<br/>
+**Ticket order post-it + pens** = 10€/month * 3 = 360€ per year <br/>
+**Total IS-related activities paper cost** = 360+270 = 630€<br/>
+**Num working days in a year** = about 330 days<br/>
+**Average Person hours for IS per working day** = about 6 hours per pizzeria (considering order management and inventory) * 3 pizzerias = 18<br/>
+**Salary [€/hours]** = 7€/hours<br/>
+**Expense in IS (employees)** = Salary * person hours per working day * num working days in a year = 7 * 18 * 330 = 41580€ per year <br/>
+**Expense in IS (Total)** = expense in IS (employees) + expense IS (paper) =  41580€ + 630€ = 42210€<br/>
+**Expense in IS (Total) = 42210€**<br/>
+**Report ratio: expense in IS / Turn over = 42210/1050000 = 0,0402**<br/>
 
 ### Other expenses (just eat fees)
 
