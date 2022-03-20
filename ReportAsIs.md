@@ -79,6 +79,12 @@ Organizational chart
 *** Cashier
 @endwbs
 ```
+Roles Legend: 
+**Pizza chef:** cooks dishes, manages the counting of the money at the end of the day, manages all the other employees of his branch, self-manages the queue of the orders sorting the ticket orders by hand in the kitchen.
+**Delivery man:** Gets ready dishes from the kitchen and the related ticket orders and drives with the dishes to the customers place.
+**Cashier:** Takes orders by the phone and accepts order requests incoming from JustEat. Every morning searches for missing or nearly-finished ingredients in the kitchen redacting a list of things to buy. Shops for the missing ingredients at local grocery stores.
+
+
 It is important to notice that the three pizzerias have no mechanism or office dedicated to horizontal communication, instead the owners use phone calls to communicate if something is out of stock in one of the branches to get it from one of the other two, so no information is stored about it. Accounting is done by counting the money by hand at the end of the day by the product owner.
 
 ### Type of structure
