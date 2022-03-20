@@ -97,20 +97,24 @@ The IT part of this organization is an external online food order service (just 
 The activities for inventory, accounting and restock are managed by the pizza chef (producing only handwritten notes on paper) 
 
 
-estimation of expense in IT/IS:
-just eat fees = about 14% <br>
-just eat ratio = just eat orders/tot orders = about 14% <br>
-expense in IT (fees)= just eat fees * just eat ratio * turnover = 0,14 * 0,25 * 1.050.000 = 36750 € per year <br>
+estimation of expense in IS:
+
 just eat paper = 7,5€/month * 3 = 270€ per year 
 ticket order post-it + pens = 10€/month * 3 = 360€ per year 
-expense IT (paper) = 360+270 = 630€<br>
+expense IS (paper) = 360+270 = 630€<br>
 num working days in a year = about 330 days
-Average Person hours for IT/IS per working day = about 6 hours per pizzeria (considering order management and inventory) * 3 pizzerias = 18
+Average Person hours for IS per working day = about 6 hours per pizzeria (considering order management and inventory) * 3 pizzerias = 18
 Salary [€/hours] = 7€/hours
-expense in IT (employees) = Salary * person hours per working day * num working days in a year = 7 * 18 * 330 = 41580€ per year <br>
-expense in IT (Total) = expense in IT (employees) + expense in IT (fees) + expense IT (paper) = 52500€ + 41580€ + 630€ = 94710€
-**expense in IT (Total) = 94710€**<br>
-**Report ratio: expense in IT / Turn over = 94710/1050000 = 0,0902**
+expense in IS (employees) = Salary * person hours per working day * num working days in a year = 7 * 18 * 330 = 41580€ per year <br>
+expense in IS (Total) = expense in IS (employees) + expense IS (paper) =  41580€ + 630€ = 42210€
+**expense in IS (Total) = 42210€**<br>
+**Report ratio: expense in IS / Turn over = 42210/1050000 = 0,0402**
+
+### Other expenses (just eat fees)
+
+just eat fees = about 14% <br>
+just eat ratio = just eat orders/tot orders = 0,25 <br>
+expense in IS (fees)= just eat fees * just eat ratio * turnover = 0,14 * 0,25 * 1.050.000 = 36750 € per year <br>
 
 ## Formalization / specialization/ centralization
 
