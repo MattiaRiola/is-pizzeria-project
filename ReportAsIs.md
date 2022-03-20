@@ -119,9 +119,9 @@ Estimation of expense in IS:
 
 ### Other expenses (just eat fees)
 
-just eat fees = about 14% <br>
-just eat ratio = just eat orders/tot orders = 0,25 <br>
-expense in IS (fees)= just eat fees * just eat ratio * turnover = 0,14 * 0,25 * 1.050.000 = 36750 € per year <br>
+**Just eat fees** = about 14% <br>
+**Just eat ratio** = just eat orders/tot orders = 0,25 <br>
+**Expense in IS (fees)** = just eat fees * just eat ratio * turnover = 0,14 * 0,25 * 1.050.000 = 36750 € per year <br>
 
 ## Formalization / specialization/ centralization
 
@@ -346,8 +346,6 @@ CSF ( derived by us)
   - CSF32 trend of sales
   - CSF33 delivered advertisement flyers
 
-
-TODO:
 
 | CSF ID | Type (domain, distinguishing, environment, contingency) | Textual description, link to strategy     | Related Metric(s)                                                                                                          | Current value (if available)                                              |
 | ------ | ------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
