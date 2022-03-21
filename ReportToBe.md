@@ -158,13 +158,13 @@ Describe here how the selection of the new application was made
 
 | Criterion                               | SirioTrade | Simphony POS for Restaurants | OpenBravo | Gloria Food | SquareUp | LightSpeed Restaurant | Loyverse |
 | --------------------------------------- | ---------- | ---------------------------- | --------- | ----------- | -------- | --------------------- | -------- |
-| Inventory Management                    |            | x                            | x         |             | x        | x                     | x        |
+| Inventory Management                    | x          | x                            | x         |             | x        | x                     | x        |
 | Kitchen / Menu Management               | x          | x                            | x         | x           | x        | x                     | x        |
 | Point of Sale (POS)                     | x          | x                            | x         |             | x        | x                     | x        |
 | Order List Management (Kitchen Display) |            | x                            |           | x           | x        | x                     | x        |
 | Just eat integration                    |            | x                            | x         | x           |          |                       |          |
 | Provides custom website                 |            |                              |           | x           | x        |                       |          |
-| Doesn't need proprietary HW             |            |                              |           | x           | x        |                       |          |
+| Doesn't need proprietary HW             | x          |                              | x         | x           | x        |                       | x        |
 
 
 
