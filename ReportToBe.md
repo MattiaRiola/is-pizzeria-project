@@ -142,15 +142,15 @@ No change
 
 Describe the applications considered for the selection
 
-| Application name             | Vendor           | Description                                                                       | Price model and fees                                     |
-| ---------------------------- | ---------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| SirioTrade                   | COMPASS          | Manages only accounting, orders at the table and menu composition.                | fixed price                                              |
-| Simphony POS for Restaurants | ORACLE           | Manages everything                                                                | monthly fee 55 €/mon                                     |
-| OpenBravo                    | OPENBRAVO        | Manages everything                                                                | monthly fee                                              |
-| Gloria Food                  | ORACLE           | Manages online orders, mobile custom application, restaurant website and payments | monthly fee 60 €/mon                                     |
-| SquareUp                     | Square           | Manages online orders, restaurant website and payments                            | monthly fee 12 €/mon + (2.9% + 30 cents) per transaction |
-| LightSpeed Restaurant        | LightSpeed       | Restaurant website and payments, menu composition, inventory management           | monthly fee 39 usd/mon + (2.6% + 10 cents)               |
-| Loyverse                     | Loyalty Universe | Manages online orders, restaurant website and payments                            | monthly fee 34 usd/mon per store                         |
+| Application name                                      | Vendor           | Description                                                                       | Price model and fees                                                                        |
+| ----------------------------------------------------- | ---------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| SirioTrade                                            | COMPASS          | Manages only accounting, orders at the table and menu composition.                | fixed price                                                                                 |
+| Simphony POS for Restaurants                          | ORACLE           | Manages everything                                                                | monthly fee 55 €/mon                                                                        |
+| OpenBravo                                             | OPENBRAVO        | Manages everything                                                                | monthly fee                                                                                 |
+| Gloria Food                                           | ORACLE           | Manages online orders, mobile custom application, restaurant website and payments | monthly fee 60 €/mon                                                                        |
+| SquareUp restaurant + squareUp Kitchen Display System | Square           | Manages online orders, restaurant website and payments, inventory management      | monthly fee 12 €/mon + (2.9% + 30 cents) per online transaction + 20€ mon per kitchen scren |
+| LightSpeed Restaurant                                 | LightSpeed       | Restaurant website and payments, menu composition, inventory management           | monthly fee 39 usd/mon + (2.6% + 10 cents)                                                  |
+| Loyverse                                              | Loyalty Universe | Manages online orders, restaurant website and payments                            | monthly fee 34 usd/mon per store                                                            |
 
 
 
@@ -167,11 +167,10 @@ Describe here how the selection of the new application was made
 | Doesn't need proprietary HW             | x          |                              | x         | x           | x        |                       | x        |
 
 
-
-
-- Out of all the considered solutions, the one offering all the needed functions is The ORACLE product "Simphony POS"  but we're excluding it because it needs proprietary hardware to run.
-
-The Coverage below is evaluated considering oracle simphony
+- The Selected product is the the free **SquareUp** POS management software combined with the 12 €/mon **online shop** service that grants to the restaurants a modern online shop from wich our customers can order + a **Kitchen Display System** service for each one of the three sites.
+- - **About the online service:** in addition to this 12€/mon there will be a 2.9% + 30 cent of fee for each online transaction, this will substitute JustEat service that AS IS takes 14% of the transaction value instead. The service also grants the possibility to get orders through social media profiles of our restaurants. //TODO:Aggiungi calcolo di risparmio rispetto alla situazione attuale con just eat. ==> (total transactions * 0.25 )*[(2.9% * avg transaction amount) + 0.30]
+- - **About the Kitchen Dislay System:** 20$ * 3 = 60$/mon total to use it in all of the 3 branches, iOS-devices compatible, provides the kitchen orders-queue managment needed and the inventory managment with auto-triggering of "product unavailability" when a product is no more available
+- //TODO: imposta un ipotesi di spesa per fornire i tre ristoranti di dispositivi iOS (degli ipad insomma, uno per la cassa e uno per la cucina)
 
 #### Coverage
 
@@ -179,12 +178,12 @@ Show how the selected application (Oracle simphony) provides the software functi
 
 | Software function needed (from process view) | Software function provided by application selected  | Gap analysis                                                                                              |
 | -------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Inventory Management                         | Inventory management                                | It doesn't have an easy and fast gui for the chef to comunicate in run time when a product is running out |
-| Kitchen / Menu Management                    | Invenctory Management / Menu management             | -                                                                                                         |
-| POS                                          | Series workstation                                  | -                                                                                                         |
-| Order List Management                        | Multi-channel visualization system for the kitchens | -                                                                                                         |
+| Inventory Management                         | Inventory management                                | - |
+| Kitchen / Menu Management                    | Inventory Management / Menu management             | -                                                                                                         |
+| POS                                          | iOS POS managment application                                  | an iOS device is needed                                                                                                         |
+| Order List Management                        | Order List management through dedicated application for a kitchen device | an iOS device is needed                                                                                                          |
+| Online orders integration                        | Online ordering through website and social media | Instead of integrating the Just Eat service into our system, it provides the online order management through a dedicate web page for our restaurant.                                                                                                         |
 
-Note: if the price of oracle application is too high we can opt for a custom made application from an it consulting company, in this case the app should be able to provide every function we need with no gap
 
 ### Technological view
 
