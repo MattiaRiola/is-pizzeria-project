@@ -181,7 +181,7 @@ Describe here how the selection of the new application was made
 **square up (fixed initial cost) = 1800€**
 #### Coverage
 
-Show how the selected application (Oracle simphony) provides the software functions needed (as identified in Functional view, processes section), discuss gaps, if any
+Show how the selected application (Square Up POS + KDS + Online service) provides the software functions needed (as identified in Functional view, processes section), discuss gaps, if any
 
 | Software function needed (from process view) | Software function provided by application selected                       | Gap analysis                                                                                                                                         |
 | -------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
