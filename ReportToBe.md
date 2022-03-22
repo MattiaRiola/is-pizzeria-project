@@ -317,10 +317,10 @@ if we consider the estimated gain from the new customers acquired thanks to the 
 
 The main risks are related to employees, they may not understand why the use of an IS is useful and they may not want to change their habits (especially for the older employees).
 In order to encourage the employees the hours spent in training must be paid (in fact the training cost is considered in the deployment cost)
-Another risk can be related to the customer's habits. They may are used to order from "Just eat" so, in order to encourage the customers to use the Squareup website, a well made advertising system is required. A simple idea based on coupons or gifts (like free drinks) for the customers that order from the website can also be useful in addition to the flyer and web advertising.
+Another risk can be related to the customer's habits. They may be used to order from "Just eat" so, in order to encourage the customers to use the Squareup website, a well made advertising system is required. A simple idea based on coupons or gifts (like free drinks) for the customers that order from the website can also be useful in addition to the flyer and web advertising.
 
 # Conclusion
 
-The organization should change in this way in order to increase the reputation of the pizzerias and pay less fees to just eat. In this way the pizzeria can easly beat the competitors and acquire new customers.
-Through the kitchen system, the Chef can focus on the preparation of the products without thining about the order queue.
+The organization should change in this way in order to increase the reputation of the pizzerias and pay less fees to just eat. In this way the pizzeria can easily beat the competitors and acquire new customers.
+Through the kitchen system, the Chef can focus on the preparation of the products without thinking about the order queue.
 The Cashier will have a more organized work method to register orders and will have less complaints from not dissatisfied customers
