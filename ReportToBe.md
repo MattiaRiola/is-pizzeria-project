@@ -167,22 +167,29 @@ Describe here how the selection of the new application was made
 | Doesn't need proprietary HW             | x          |                              | x         | x           | x        |                       | x        |
 
 
-- The Selected product is the the free **SquareUp** POS management software combined with the 12 €/mon **online shop** service that grants to the restaurants a modern online shop from wich our customers can order + a **Kitchen Display System** service for each one of the three sites.
-- - **About the online service:** in addition to this 12€/mon there will be a 2.9% + 30 cent of fee for each online transaction, this will substitute JustEat service that AS IS takes 14% of the transaction value instead. The service also grants the possibility to get orders through social media profiles of our restaurants. //TODO:Aggiungi calcolo di risparmio rispetto alla situazione attuale con just eat. ==> (total transactions * 0.25 )*[(2.9% * avg transaction amount) + 0.30]
-- - **About the Kitchen Dislay System:** 20$ * 3 = 60$/mon total to use it in all of the 3 branches, iOS-devices compatible, provides the kitchen orders-queue managment needed and the inventory managment with auto-triggering of "product unavailability" when a product is no more available
-- //TODO: imposta un ipotesi di spesa per fornire i tre ristoranti di dispositivi iOS (degli ipad insomma, uno per la cassa e uno per la cucina)
+**assuming that the squareUp order ratio will be 0,10 and just eat order ratio will decrease from 0,25 to 0,15**
 
+- The Selected product is the the free **SquareUp** POS management software combined with the 12 €/mon **online shop** service that grants to the restaurants a modern online shop from wich our customers can order + a **Kitchen Display System** service for each one of the three sites.
+   - **About the online service:** in addition to this 12€/mon there will be a 2.9% + 30 cent of fee for each online transaction, this will substitute JustEat service that AS IS takes 14% of the transaction value instead. The service also grants the possibility to get orders through social media profiles of our restaurants. 
+      - **SquareUp online service (fees) = 3189€ per year** = SquareUp fixed monthly cost * 12 months + SquareUp fees on transaction * SquareUp ratio * turnover = 12 * 12 + 0,029 * 0,10 * 1050000 
+   - **About the Kitchen Dislay System:** 
+     - **SquareUp kitchen system (fees) = 720€/year** = 20€/mon * 3 * 12 = 60€/mon * 12 
+     total to use it in all of the 3 branches, iOS-devices compatible, provides the kitchen orders-queue managment needed and the inventory managment with auto-triggering of "product unavailability" when a product is no more available
+     - **SquareUp kitchen system (fixed initial cost) = 1800€** = 300€ * 6 = tablet price * # devices (2 per pizzerias, one for the kitchen one for the cashier) 
+
+**square up (fees per year) = 3189€ + 720€ = 3909€**
+**square up (fixed initial cost) = 1800€**
 #### Coverage
 
 Show how the selected application (Oracle simphony) provides the software functions needed (as identified in Functional view, processes section), discuss gaps, if any
 
-| Software function needed (from process view) | Software function provided by application selected  | Gap analysis                                                                                              |
-| -------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Inventory Management                         | Inventory management                                | - |
-| Kitchen / Menu Management                    | Inventory Management / Menu management             | -                                                                                                         |
-| POS                                          | iOS POS managment application                                  | an iOS device is needed                                                                                                         |
-| Order List Management                        | Order List management through dedicated application for a kitchen device | an iOS device is needed                                                                                                          |
-| Online orders integration                        | Online ordering through website and social media | Instead of integrating the Just Eat service into our system, it provides the online order management through a dedicate web page for our restaurant.                                                                                                         |
+| Software function needed (from process view) | Software function provided by application selected                       | Gap analysis                                                                                                                                         |
+| -------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Inventory Management                         | Inventory management                                                     | -                                                                                                                                                    |
+| Kitchen / Menu Management                    | Inventory Management / Menu management                                   | -                                                                                                                                                    |
+| POS                                          | iOS POS managment application                                            | an iOS device is needed                                                                                                                              |
+| Order List Management                        | Order List management through dedicated application for a kitchen device | an iOS device is needed                                                                                                                              |
+| Online orders integration                    | Online ordering through website and social media                         | Instead of integrating the Just Eat service into our system, it provides the online order management through a dedicate web page for our restaurant. |
 
 
 ### Technological view
@@ -255,53 +262,65 @@ Report only indicators that are supposed to change, argument on why the change h
 
 In the following analysis we consider the custom made application
 
-| Phsae          | Description                                                                          |
-| -------------- | ------------------------------------------------------------------------------------ |
-| Construction C | Cost for development/acquisition of the software application and the hardware needed |
-| Deployment D   | Cost for deployment of software funcions and training of employees                   |
-| Operation O    | Cost for the infrasructure operation (electricity)                                   |
-| Dismissal DS   | Cost for uninstalling application and infrastructure dismissal                       |
-| Gain  G        | Gain considering the acquisition of new clients because of the better reputation     |
-| Saving S       | The saving money considering the upgrade of the IS (no paper post-it are needed)     |
+| Phsae             | Description                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------------------- |
+| Construction Cost | Cost for development/acquisition of the software application and the hardware needed                  |
+| Deployment D      | Cost for deployment of software funcions and training of employees                                    |
+| Operation O       | Cost for the infrasructure operation (electricity) and hw riparation (i.e tablet damage repair)       |
+| Maintenance M     | SquareUp fees                                                                                         |
+| Advertising A1    | Web Advertising cost in order to sponsor the new website                                              |
+| Advertising A2    | Advertising cost in order to sponsor the new website using flyer (only the first year)                |
+| Dismissal DS      | Cost for uninstalling application and infrastructure dismissal                                        |
+| Gain  G           | Gain considering the acquisition of new clients because of the better reputation                      |
+| Saving S1         | The saving money considering the upgrade of the IS (reduced just eat paper and no post-it are needed) |
+| Saving S2         | The saving money considering that just eat (and the its fees) will be replaced with squareup          |
 
 
 
 Assuming:
+- training time:
+
 | role         | num of employees | estimate training time |
 | ------------ | ---------------- | ---------------------- |
 | pizza chef   | 3                | 8h                     |
 | cashier      | 3                | 8h                     |
 | delivery man | 12               | 1h                     |
  total:                  8 * 3 + 8 * 3 + 1 * 12 = 60h 
-
- - Cost+D = cost of the application + estimate training time * salary = 15k€ + 60h * 7€/h = 15420 €
- - O + M = about 3k€
- - S = CostOfTicketOrderPostitPerYear
+considering one year:
+ - **Cost+D = 2220€** = 1800€ + 60h * 7€/h = squareup (initial fixed cost) + estimate training time * salary 
+ - **O = 260€** = 200€ + 60€ = hw repair + electricity 
+   - *considering 200€ for tablet maintenance and 0,20€/kW and 50W * 3h per day per tablet*
+ - **M =  3909€** = squareup fees
+ - **S1 = 630€** = 270+360 = post it + just eat paper
+ - **S2 = 14700€** = 36750 - 22050 =  just eat fees (asis: with just eat order ratio = 0,25) - just eat fees (tobe: just eat order ratio = 0,15)
+ - **A1 = 228€** = 19€/mon * 12 (this is an extimation considering the costs of the gloriafood advertising cost)
+ - **A2 = 400€** = 300€ + 100€ = cost of the flyer + cost of distribution
  - The reputation of the pizzerias can't be evalued in saving money but in can be evaluated in `number of gained fidelity customers` in the year $y$ :  "$C_y$" that will not be lost and new acquired customers
    - `estimated # lost fidelity customers in a year` : 10 (because of errors in the orders)
    - `estimated # new fidelity customers in a year y`: this is incremental because the reputation will increase over time (i.e: 15, 21, 30, 45, 60 )
-   - `average gain from a single fidelity customer`: $C_€ = 10 €/month = 120€/year$
+   - `average net gain from a single fidelity customer`: $C_€ = 10 €/month = 120€/year$
  - G =$ \sum_{n=1}^{y} C_n *C_€ $
    - where C_n = estimated # lost fidelity customers in a year + estimated # new fidelity customers in the year n 
      - *(i.e. in the year 1 C_1 = 15 + 10 = 25 -> G = 25*120€ = 3000€;  in the year 2 C_2 = C_1 + 10 + 21 =  (25+10+21)*120€ = 6720€)*
 
 
-|        | Year 1           | Year 2                | Year 3                    | Year 4                        | Year 5                           |
-| ------ | ---------------- | --------------------- | ------------------------- | ----------------------------- | -------------------------------- |
-| Cost   | Cost,D,O,M       | O,M                   | O,M                       | O,M                           | O,M                              |
-| $C_y$  | 10+15=25         | 10+21=31              | 10+30=40                  | 10+45=55                      | 10+60=70                         |
-| Saving | S                | S                     | S                         | S                             | S                                |
-| Gain   | 25 * 120 = 3000€ | (31+25) * 120 = 6720€ | (25+31+40) * 120 = 11520€ | (25+31+40+55) * 120 =  18120€ | (25 +31+40+55+70) * 120 = 26520€ |
-| Total  | -15060€          | -10980€               | -2100€                    | 13380€                        | 36900€                           |
+|        | Year 1                   | Year 2                | Year 3                    | Year 4                        | Year 5                          |
+| ------ | ------------------------ | --------------------- | ------------------------- | ----------------------------- | ------------------------------- |
+| Cost   | Cost,D,O,M,A1,A2 = 7017€ | O,M,A1 = 4397€        | O,M,A1 = 4397€            | O,M,A1 = 4397€                | O,M,A1 = 4397€                  |
+| Saving | S1,S2 = 15330€           | S1,S2 = 15330€        | S1,S2 = 15330€            | S1,S2 = 15330€                | S1,S2 = 15330€                  |
+| $C_y$  | 10+15=25                 | 10+21=31              | 10+30=40                  | 10+45=55                      | 10+60=70                        |
+| Gain   | 25 * 120 = 3000€         | (31+25) * 120 = 6720€ | (25+31+40) * 120 = 11520€ | (25+31+40+55) * 120 =  18120€ | (25+31+40+55+70) * 120 = 26520€ |
+| Total  | +11313€                  | +28966€               | +51419€                   | +80472€                       | +117925€                        |
 
-if we consider the estimated gain from the new customers acquired thanks to the increase in reputation, **3 years are needed to recover the initial cost**
+if we consider the estimated gain from the new customers acquired thanks to the increase in reputation, the saved money for just eat fees and all the costs related to the squareUp and the extra advertising of the website **the initial cost will be recovered in 1 year**
 ## Risks
 
 The main risks are related to employees, they may not understand why the use of an IS is useful and they may not want to change their habits (especially for the older employees).
 In order to encourage the employees the hours spent in training must be paid (in fact the training cost is considered in the deployment cost)
+Another risk can be related to the customer's habits. They may are used to order from "Just eat" so, in order to encourage the customers to use the Squareup website, a well made advertising system is required. A simple idea based on coupons or gifts (like free drinks) for the customers that order from the website can also be useful in addition to the flyer and web advertising.
 
 # Conclusion
 
-The organization should change in this way in order to increase the reputation of the pizzerias. In this way the pizzeria can easly beat the competitors and acquire new customers.
-The Chef can focus on the preparation of the products without thining about the order queue.
+The organization should change in this way in order to increase the reputation of the pizzerias and pay less fees to just eat. In this way the pizzeria can easly beat the competitors and acquire new customers.
+Through the kitchen system, the Chef can focus on the preparation of the products without thining about the order queue.
 The Cashier will have a more organized work method to register orders and will have less complaints from not dissatisfied customers
