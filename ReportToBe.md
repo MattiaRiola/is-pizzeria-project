@@ -17,6 +17,7 @@ An existing restaurant-management product will be introduced to automatize and r
 - Register customer to get customer informations only once in order to:
   - build loyalty of the customer by offering loyalty prizes.
   - speed up ordering process
+- An online store will be introduced to offer a web ordering alternative to the customers without the downside of the high fees of just eat.
 
 # Organizational variables
 
@@ -105,6 +106,7 @@ No change
 ![get new order bpmn](./images/BPMN_TOBE_GetNewOrder.png)
 - Order is no more registered through a post it but instead is inserted in a form, leaving less space to human error (forgetting to ask for something) in getting the infos 
 - The order can be composed only with products formed by ingredients that are available.
+- orders can now arrive also through the website with a lower expense in terms of fee compared to JustEat.
 - A created order becomes now visible to the pizza chef automatically from a dedicated screen in the kitchen 
 - Orders not being physical beings are now immune to loss or damage.
 #### Queue management
@@ -197,22 +199,24 @@ Show how the selected application (Square Up POS + KDS + Online service) provide
 ```plantuml
 @startuml
 node Just_eat_server
-node Pizzeria_server
+node SquareUp_server
 node Deliverer_smartphone
 node Cashier_pc
 node Chef_device
 
 artifact JustEat_app
 artifact browser
-artifact PizzeriaManagementApp
+artifact SquareUpApp
+artifact PizzeriaWebsite
 
 Just_eat_server -- Chef_device
-Pizzeria_server -r- Just_eat_server
-JustEat_app -u- Chef_device
-Pizzeria_server -- Cashier_pc
-Pizzeria_server -- Deliverer_smartphone
-Pizzeria_server -- Chef_device 
-Pizzeria_server -u- PizzeriaManagementApp
+SquareUp_server -r- Just_eat_server
+JustEat_app -u- Just_eat_server
+SquareUp_server -- Cashier_pc
+SquareUp_server -- Deliverer_smartphone
+SquareUp_server -- Chef_device
+SquareUp_server -u- PizzeriaWebsite  
+SquareUp_server -u- SquareUpApp
 Deliverer_smartphone  -- browser
 Chef_device  -- browser
 Cashier_pc  -- browser
