@@ -191,7 +191,7 @@ Show how the selected application (Square Up POS + KDS + Online service) provide
 | Kitchen / Menu Management                    | Inventory Management / Menu management                                   | -                                                                                                                                                    |
 | POS                                          | iOS POS managment application                                            | an iOS device is needed                                                                                                                              |
 | Order List Management                        | Order List management through dedicated application for a kitchen device | an iOS device is needed                                                                                                                              |
-| Online orders integration                    | Online ordering through website and social media                         | Instead of integrating the Just Eat service into our system, it provides the online order management through a dedicate web page for our restaurant. |
+| Online orders integration                    | Online ordering through website and social media                         | Instead of just integrating the Just Eat service into our system, it also provides the online order management through a dedicate web page for our restaurant. |
 
 
 ### Technological view
@@ -201,49 +201,44 @@ Show how the selected application (Square Up POS + KDS + Online service) provide
 node Just_eat_server
 node SquareUp_server
 node Deliverer_smartphone
-node Cashier_pc
+node Cashier_device
 node Chef_device
 
 artifact JustEat_app
 artifact browser
-artifact SquareUpApp
+artifact SquareUpOnlineService
 artifact PizzeriaWebsite
+artifact KitchenDisplaySystem_App
+artifact SquareUpPOS_App
 
-Just_eat_server -- Chef_device
 SquareUp_server -r- Just_eat_server
-JustEat_app -u- Just_eat_server
-SquareUp_server -- Cashier_pc
+JustEat_app -- Just_eat_server
+SquareUp_server -- Cashier_device
 SquareUp_server -- Deliverer_smartphone
 SquareUp_server -- Chef_device
 SquareUp_server -u- PizzeriaWebsite  
-SquareUp_server -u- SquareUpApp
+SquareUp_server -u- SquareUpOnlineService
 Deliverer_smartphone  -- browser
-Chef_device  -- browser
-Cashier_pc  -- browser
+Chef_device  -- KitchenDisplaySystem_App
+Cashier_device  -- SquareUpPOS_App
 @enduml
 ```
 
 #### Integration
 
-In case a new application is introduced discuss how integration happens in terms of
-
-Data exchange (which data is exchanged)
-
-Control mechanism (mechanism used by applications to interact, ex message passing, rpc, etc)
-
-The custom made app PizzeriaManagementApp will be deployed in a cloud server rented, Employees will have their accounts and will be able to perform their tasks through a browser in their devices.
+Employees will have their accounts and will be able to perform their tasks through an app or a browser in their devices.
 
 - Data exchange
-  - Orders received and products availability communicated between cashiers and chefs through the web app 
-  - Product availability communicated from chefs and just eat app through autmatic detection of unavailable products from pizzerias server to JustEat
+  - Orders received and products availability communicated between cashiers and chefs through the apps in their devices and automatically decreased by the system for each processed order
+  - Product availability state automatically communicated from SquareUp POS system to both online shop and just eat app
 
 - Control mechanism
-  - PizzeriaManagementApp will communicate to JustEat with JustEat exposed APIs.
+  - The SquareUp POS application integrates orders coming from JustEat and from the online shop provided by SquareUp online service.
 
 # IT strategy
 
-The development and maintenance of the webapp will be outsourced to a consulence.
-The hosting of the server will be outsourced to a cloud hosting provider by renting it.
+The development and maintenance of the services is outsourced and provided by SquareUp.
+The online shop will be hosted and provided along with the domain by SquareUp that will also process online payments.
 
 # Effect of change(s)
 
