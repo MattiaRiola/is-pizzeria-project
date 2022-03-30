@@ -19,6 +19,9 @@ An existing restaurant-management product will be introduced to automatize and r
   - speed up ordering process
 - An online store will be introduced to offer a web ordering alternative to the customers without the downside of the high fees of just eat.
 
+la soluzione trovata tra le varie cose considera il mantenimento di just eat insieme all'introduzione di un servizio di ordinazione online alternativo, la ragione è che togliendo completamente just eat si perderebbero gran parte (secondo il proprietario un abbondante 90%) dei clienti della pizzeria che ordinano attraverso just eat.
+Abbiamo dunque pensato che l'introduzione del sito con SquareUp non debba sostituire completamente just eat, i clienti potranno continuare a ordinare su just eat ma, attraverso una campagna di advertising (stimata sui 19€ al mese), il ratio di ordini provenienti di just eat si abbassa dal 25% al 15%. Questi ordini (che ammonteranno al 10% degli ordini totali) verranno fatti dal sito fornito da squareup e si dovrà comunque pagare a squareup il 2,9% su ogni transazione (contro il 14% di just eat). 
+
 # Organizational variables
 
 Keep this section and subsections, if there is no change just write 'no change'.  In case there is a change detail it.
