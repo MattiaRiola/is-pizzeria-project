@@ -66,6 +66,9 @@ Ticket order now have an additional field: customer number
 
 Quantity in Ingredient (empty low  medium full)
 
+![](./puml/tobe/functional_view_data.svg)
+
+<!--
 ```plantuml
 @startuml
 class TicketOrder {
@@ -92,6 +95,7 @@ Product "+" -- "*" TicketOrder : ordered in >
 Ingredient "+" -- "*" Product 
 @enduml
 ```
+-->
 
 ## Functional view, processes
 
@@ -199,6 +203,10 @@ Show how the selected application (Square Up POS + KDS + Online service) provide
 
 ### Technological view
 
+![](./puml/tobe/technological_view.svg)
+
+
+<!--
 ```plantuml
 @startuml
 node Just_eat_server
@@ -226,6 +234,7 @@ Chef_device  -- KitchenDisplaySystem_App
 Cashier_device  -- SquareUpPOS_App
 @enduml
 ```
+-->
 
 #### Integration
 

@@ -63,8 +63,11 @@ Strategy: low cost and fast delivery
 
 ## Structure
 
-Organizational chart
+### Organizational chart
 
+![](./puml/asis/org_chart.svg)
+
+<!--
 ```plantuml
 @startwbs
 * main organization
@@ -79,6 +82,8 @@ Organizational chart
 *** Cashier
 @endwbs
 ```
+-->
+
 Roles Legend: 
 - **Pizza chef:** cooks dishes, manages the counting of the money at the end of the day, manages all the other employees of his branch, self-manages the queue of the orders sorting the ticket orders by hand in the kitchen. Every morning searches for missing or nearly-finished ingredients in the kitchen redacting a list of things to buy.
 - **Delivery man:** Gets ready dishes from the kitchen and the related ticket orders and drives with the dishes to the customers place.
@@ -171,6 +176,9 @@ Remark: key processes box must be consistent with IS Views /  Process view (belo
 
 ## Functional view, data
 
+![](./puml/asis/functional_view_data.svg)
+
+<!--
 ```plantuml
 @startuml
 class Pizzerie2Fratelli {
@@ -259,7 +267,7 @@ Review "0..1" -- TicketOrder
 
 @enduml
 ```
-
+-->
 
 ## Functional view, processes
 
@@ -305,6 +313,9 @@ For processes that will be changed in the transition to To Be report BPMN model
 
 ### Technological view
 
+![](./puml/asis/technological_view.svg)
+
+<!--
 ```plantuml
 @startuml
 node Just_eat_server
@@ -317,7 +328,7 @@ JustEat_app -l- Chef_device
 
 @enduml
 ```
-
+-->
 ### Outsourcing
 
 The service "JustEat" used to get orders is outsourced.
